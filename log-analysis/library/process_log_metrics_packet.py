@@ -5,10 +5,10 @@ import ipaddress
 from pathlib import Path
 import matplotlib.pyplot as plt
 
-# tenta usar seaborn para os boxplots; faz fallback para matplotlib se não houver
+# Try to use seaborn for boxplots; fall back to matplotlib if not available
 try:
     import seaborn as sns  # type: ignore
-except Exception:  # seaborn não instalado
+except Exception:  # seaborn not installed
     sns = None
 
 def convert_log_to_csv(log_path: Path, csv_output: Path) -> pd.DataFrame:
@@ -30,7 +30,7 @@ def convert_log_to_csv(log_path: Path, csv_output: Path) -> pd.DataFrame:
 
     # DataFrame
     df = pd.DataFrame(rows)
-    # garante presença de colunas importantes mesmo se faltarem
+    # Ensure the presence of important columns even if missing
     if "node" not in df.columns:
         df["node"] = "unknown"
     if "root_time_now" not in df.columns:
@@ -44,7 +44,7 @@ def convert_log_to_csv(log_path: Path, csv_output: Path) -> pd.DataFrame:
 def _last_hextet_decimal(addr: str) -> int:
     addr = addr.split('%', 1)[0]
     ipv6 = ipaddress.IPv6Address(addr)
-    hextets = ipv6.exploded.split(':')  
+    hextets = ipv6.exploded.split(':')
     return int(hextets[-1], 16)
 
 def process_log(
@@ -56,7 +56,7 @@ def process_log(
     # DataFrame
     df = convert_log_to_csv(log_path, csv_full_output)
 
-    # lost packets amount (só cria se as colunas base existirem)
+    # Lost packet count (create only if the base columns exist)
     if {"server_sent", "total_received"}.issubset(df.columns):
         df["lost_packets_r2n"] = df["server_sent"] - df["total_received"]
     else:
@@ -67,7 +67,7 @@ def process_log(
     else:
         df["lost_packets_n2r"] = pd.NA
 
-    # Métricas (filtra apenas as que existem no DF)
+    # Metrics (filter only the ones that exist in the DataFrame)
     desired_metrics = [
         "rtt_latency",
         "r2n_latency",
@@ -82,31 +82,14 @@ def process_log(
     ]
     metrics_cols = [c for c in desired_metrics if c in df.columns]
 
-    # Means por mote
-    if metrics_cols:
-        means = (
-            df.groupby("node")[metrics_cols]
-            .mean(numeric_only=True)
-            .round(2)
-            .reset_index()
-        )
-    else:
-        means = pd.DataFrame(columns=["node"])
-    csv_means_output.parent.mkdir(parents=True, exist_ok=True)
-    means.to_csv(csv_means_output, index=False)
-
-    print("\n=== MEANS PER MOTE ===")
-    if not means.empty:
-        print(means.to_string(index=False))
-    else:
-        print("(nenhuma métrica encontrada para calcular médias)")
-
-    # --------------------------- Plots -----------------------------------------
+    # --------------------------- Line plots --------------------------------
     dir_plots_output.mkdir(parents=True, exist_ok=True)
     dir_lines = dir_plots_output / "lines"
     dir_boxes = dir_plots_output / "boxes"
+    dir_bars  = dir_plots_output / "bars"
     dir_lines.mkdir(exist_ok=True)
     dir_boxes.mkdir(exist_ok=True)
+    dir_bars.mkdir(exist_ok=True)
 
     unique_nodes = df["node"].unique()
 
@@ -124,14 +107,15 @@ def process_log(
         plt.title(f"{metric} over time")
         plt.xlabel("root_time_now (ms)")
         plt.ylabel(metric)
-        
+
+        # Legend outside the chart (to the right)
         plt.legend(
-            loc="center left",           
-            bbox_to_anchor=(1.02, 0.5),  
+            loc="center left",
+            bbox_to_anchor=(1.02, 0.5),
             fontsize="small",
             frameon=False
         )
-        
+
         plt.grid(True, linestyle="--", alpha=0.5)
         plt.tight_layout()
 
@@ -140,16 +124,41 @@ def process_log(
         plt.savefig(out_path, dpi=150)
         plt.close()
 
+    # --------------------------- CSV of means  ------------------------------
+    # Map numeric label 2,3,... per node (also used in plots)
     node_order = sorted(df["node"].astype(str).unique())
     node_to_labelnum = {n: i + 2 for i, n in enumerate(node_order)}
     df["label"] = df["node"].astype(str).map(node_to_labelnum)
 
+    # Means per node
+    if metrics_cols:
+        means_df = (
+            df.groupby("node")[metrics_cols]
+            .mean(numeric_only=True)
+            .round(3)
+            .reset_index()
+        )
+    else:
+        means_df = pd.DataFrame(columns=["node"])
+
+    # Add numeric label (2,3,...) to means CSV
+    means_df["label"] = means_df["node"].astype(str).map(node_to_labelnum)
+
+    csv_means_output.parent.mkdir(parents=True, exist_ok=True)
+    means_df.to_csv(csv_means_output, index=False)
+
+    print("\n=== MEANS PER MOTE ===")
+    if not means_df.empty:
+        print(means_df.to_string(index=False))
+    else:
+        print("(no metrics found to compute means)")
+
+    # --------------------------- Boxplots --------------------------------------
     for metric in metrics_cols:
         safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
         out_path = dir_boxes / f"{safe_metric}.png"
 
         fdf = df.dropna(subset=[metric])
-
         if fdf.empty:
             continue
 
@@ -160,6 +169,7 @@ def process_log(
                 x="label", y=metric, hue="node",
                 ax=ax, showcaps=True, width=0.6
             )
+            # Remove legend
             if ax.get_legend():
                 ax.get_legend().remove()
             ax.set_title(metric)
@@ -178,13 +188,87 @@ def process_log(
             data = [fdf.loc[fdf["_cat"] == c, metric].dropna().values for c in cats]
 
             fig, ax = plt.subplots(figsize=(12, 4))
-            bp = ax.boxplot(data, patch_artist=True, widths=0.6, showcaps=True)
+            ax.boxplot(data, patch_artist=True, widths=0.6, showcaps=True)
             ax.set_xticks(range(1, len(cats) + 1))
             ax.set_xticklabels(cats, rotation=20, ha="right")
-            ax.set_title(f"{metric} (non seaborn)")
+            ax.set_title(f"{metric} (non-seaborn)")
             ax.set_xlabel("")
             ax.set_ylabel(metric)
             ax.grid(True, linestyle="--", alpha=0.5)
+            fig.tight_layout()
+            fig.savefig(out_path, dpi=150)
+            plt.close(fig)
+
+    # --------------------------- Bar charts (means) -------------------------------
+    # For each metric, plot bars showing the mean per node (X-axis = label 2,3,...)
+    if not means_df.empty:
+        # Prepare table (node, label, mean_value) for each metric
+        for metric in metrics_cols:
+            if metric not in means_df.columns:
+                continue
+
+            safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
+            out_path = dir_bars / f"{safe_metric}.png"
+
+            bdf = means_df[["node", "label", metric]].dropna().copy()
+            # Sort by label (numeric)
+            bdf = bdf.sort_values("label")
+
+            fig, ax = plt.subplots(figsize=(10, 5))
+            if sns is not None:
+                sns.barplot(data=bdf, x="label", y=metric, ax=ax)
+            else:
+                ax.bar(bdf["label"].astype(str).values, bdf[metric].values)
+
+            ax.set_title(f"{metric} (mean per node)")
+            ax.set_xlabel("Node (numeric label starting from 2)")
+            ax.set_ylabel(metric)
+            ax.grid(True, linestyle="--", alpha=0.5, axis="y")
+            fig.tight_layout()
+            fig.savefig(out_path, dpi=150)
+            plt.close(fig)
+            
+    for c in ["server_sent", "server_received"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+            
+    # ---------- Bar charts (accumulated per node via MAX from raw data) ----------
+    # server_sent_max and server_received_max
+    raw_cols = [c for c in ["server_sent", "server_received"] if c in df.columns]
+    if raw_cols:
+        max_df = (
+            df.groupby("node")[raw_cols]
+              .max(numeric_only=True)
+              .rename(columns={
+                  "server_sent": "server_sent_max",
+                  "server_received": "server_received_max"
+              })
+              .reset_index()
+        )
+        # Map label 2,3,... to maintain the same visual order
+        node_order = sorted(df["node"].astype(str).unique())
+        node_to_labelnum = {n: i + 2 for i, n in enumerate(node_order)}
+        max_df["label"] = max_df["node"].astype(str).map(node_to_labelnum)
+        max_df = max_df.sort_values("label")
+
+        for col in ["server_sent_max", "server_received_max"]:
+            if col not in max_df.columns:
+                continue
+
+            safe_name = re.sub(r"[^A-Za-z0-9_\-]+", "_", col).strip("_")
+            out_path = (dir_bars / f"{safe_name}.png")
+
+            fig, ax = plt.subplots(figsize=(10, 5))
+            if sns is not None:
+                sns.barplot(data=max_df, x="label", y=col, ax=ax)
+            else:
+                ax.bar(max_df["label"].astype(str).values, max_df[col].values)
+
+            # Titles/labels
+            ax.set_title(f"{col} (maximum observed per node in raw data)")
+            ax.set_xlabel("Node (numeric label starting from 2)")
+            ax.set_ylabel(col)
+            ax.grid(True, linestyle="--", alpha=0.5, axis="y")
             fig.tight_layout()
             fig.savefig(out_path, dpi=150)
             plt.close(fig)

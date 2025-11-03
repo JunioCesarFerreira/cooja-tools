@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 
 # -------------------------------------------------------------------------------------
-# Imports locais
+# Local imports
 # -------------------------------------------------------------------------------------
 from library.dto import SimulationConfig
 from library.parse_json_pos import generate_positions_from_json
 from library.replace_xml import update_simulation_xml
 
 # -------------------------------------------------------------------------------------
-# Função principal de conversão dos arquivos de configuração do Cooja
+# Main function for converting Cooja configuration files
 # -------------------------------------------------------------------------------------
 def convert_simulation_files(
     config: SimulationConfig, 
@@ -18,25 +18,25 @@ def convert_simulation_files(
     outsim: str = "./output/simulation.xml",
     outpos: str = "./output/positions.dat"
 ):
-    """Processa a simulação completa a partir dos arquivos de configuração."""
+    """Processes the full simulation from the configuration files."""
     
-    # Gera arquivo de posições e obtém posições iniciais
+    # Generate the positions file and obtain initial positions
     fixed_positions, mobile_start_positions = generate_positions_from_json(
         config["simulationElements"], 
         output_filename=outpos
     )
     
-    # Se não há motes móveis, remove o arquivo positions.dat (não necessário)
+    # If there are no mobile motes, remove the positions.dat file (not needed)
     if not mobile_start_positions:
         try:
             os.remove(outpos)
         except FileNotFoundError:
-            pass  # evita erro se o arquivo ainda não foi criado
+            pass  # avoid error if the file has not been created yet
     
-    # Identifica motes servidores (assume que o primeiro fixo é o servidor)
+    # Identify root motes (assumes the first fixed mote is the root)
     root_motes = [1]
     
-    # Gera arquivo XML de simulação
+    # Generate the XML simulation file
     update_simulation_xml(
         fixed_positions=fixed_positions,
         mobile_positions=mobile_start_positions,
@@ -49,10 +49,10 @@ def convert_simulation_files(
     )
 
 # -------------------------------------------------------------------------------------
-# Função main
+# Main function
 # -------------------------------------------------------------------------------------
 def main():
-    # Diretórios e arquivos
+    # Directories and files
     DATA_DIR = Path("data")
     TEMPLATE_XML = DATA_DIR / "simulation_template.xml"
 
@@ -66,19 +66,19 @@ def main():
 
     INPUT_JSON =  INPUT_DIR / "input.json"
         
-    # Leitura do JSON
+    # Read the JSON configuration
     with open(INPUT_JSON, 'r', encoding='utf-8') as f:
         sim_model = json.load(f)
 
-    # Execução da conversão
+    # Run the conversion
     convert_simulation_files(sim_model, TEMPLATE_XML, OUTSIM_XML, OUTPOS_DAT)
 
-    # Mensagens finais
-    print(f"✅ Simulação gerada com sucesso a partir de '{INPUT_JSON}'.")
-    print(f"📄 Saídas: {OUTSIM_XML} e {OUTPOS_DAT}")
+    # Final messages
+    print(f"✅ Simulation successfully generated from '{INPUT_JSON}'.")
+    print(f"📄 Output files: {OUTSIM_XML} and {OUTPOS_DAT}")
 
 # -------------------------------------------------------------------------------------
-# Ponto de entrada
+# Entry point
 # -------------------------------------------------------------------------------------
 if __name__ == "__main__":
     main()

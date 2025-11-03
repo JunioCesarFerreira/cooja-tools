@@ -1,6 +1,7 @@
 import json
 import re
 import pandas as pd
+import ipaddress
 from pathlib import Path
 import matplotlib.pyplot as plt
 
@@ -40,6 +41,11 @@ def convert_log_to_csv(log_path: Path, csv_output: Path) -> pd.DataFrame:
     df.to_csv(csv_output, index=False)
     return df
 
+def _last_hextet_decimal(addr: str) -> int:
+    addr = addr.split('%', 1)[0]
+    ipv6 = ipaddress.IPv6Address(addr)
+    hextets = ipv6.exploded.split(':')  
+    return int(hextets[-1], 16)
 
 def process_log(
     log_path: Path,
@@ -113,12 +119,19 @@ def process_log(
             plt.plot(
                 node_df["root_time_now"],
                 node_df[metric],
-                label=f"{node}",
+                label=f"{_last_hextet_decimal(node)}",
             )
         plt.title(f"{metric} over time")
         plt.xlabel("root_time_now (ms)")
         plt.ylabel(metric)
-        plt.legend(loc="upper left", fontsize="small")
+        
+        plt.legend(
+            loc="center left",           
+            bbox_to_anchor=(1.02, 0.5),  
+            fontsize="small",
+            frameon=False
+        )
+        
         plt.grid(True, linestyle="--", alpha=0.5)
         plt.tight_layout()
 
@@ -127,8 +140,9 @@ def process_log(
         plt.savefig(out_path, dpi=150)
         plt.close()
 
-    if "label" not in df.columns:
-        df["label"] = "run"
+    node_order = sorted(df["node"].astype(str).unique())
+    node_to_labelnum = {n: i + 2 for i, n in enumerate(node_order)}
+    df["label"] = df["node"].astype(str).map(node_to_labelnum)
 
     for metric in metrics_cols:
         safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
@@ -146,10 +160,11 @@ def process_log(
                 x="label", y=metric, hue="node",
                 ax=ax, showcaps=True, width=0.6
             )
+            if ax.get_legend():
+                ax.get_legend().remove()
             ax.set_title(metric)
             ax.set_xlabel("")
             ax.set_ylabel(metric)
-            ax.legend(title="Nodes", loc="best", fontsize="small")
             ax.grid(True, linestyle="--", alpha=0.5)
             sns.despine(ax=ax)
             fig.tight_layout()
@@ -166,7 +181,7 @@ def process_log(
             bp = ax.boxplot(data, patch_artist=True, widths=0.6, showcaps=True)
             ax.set_xticks(range(1, len(cats) + 1))
             ax.set_xticklabels(cats, rotation=20, ha="right")
-            ax.set_title("Análise de Interferência (sem seaborn)")
+            ax.set_title(f"{metric} (non seaborn)")
             ax.set_xlabel("")
             ax.set_ylabel(metric)
             ax.grid(True, linestyle="--", alpha=0.5)

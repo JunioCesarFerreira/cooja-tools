@@ -5,7 +5,7 @@ It automates the generation of simulation scripts based on structured input data
 
 ---
 
-## 📁 Project Structure
+## 📁 Directory Structure
 
 ```
 json2cooja/
@@ -19,6 +19,7 @@ json2cooja/
 │   ├── parse_json_pos.py
 │   └── replace_xml.py
 └── output/
+    ├── network.png
     ├── simulation.xml
     └── positions.dat
 ```

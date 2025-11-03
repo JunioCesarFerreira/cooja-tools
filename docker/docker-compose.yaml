@@ -1,0 +1,7 @@
+services:
+  cooja-test:
+    image: juniocesarferreira/simulation-cooja:v1.1
+    container_name: cooja_test
+    restart: unless-stopped
+    ports:
+      - "2230:22"

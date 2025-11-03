@@ -73,7 +73,7 @@ Wait for this to finish before proceeding to the next step.
 After the simulation finishes, to retrieve the log file, run following command from within the `cooja-tools` directory
 
 ```bash
-scp -P 2230 root@127.0.0.1:/opt/contiki-ng/tools/cooja/COOJA.testlog log-analysis/cooja.log
+scp -P 2230 root@127.0.0.1:/opt/contiki-ng/tools/cooja/COOJA.testlog log-analysis/input/cooja.log
 ```
 
 Then, use the `analysis.py` script to generate statistics and graphs for the executed simulation.

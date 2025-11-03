@@ -8,6 +8,7 @@ from pathlib import Path
 from library.dto import SimulationConfig
 from library.parse_json_pos import generate_positions_from_json
 from library.replace_xml import update_simulation_xml
+from library.plot_network import plot_network
 
 # -------------------------------------------------------------------------------------
 # Main function for converting Cooja configuration files
@@ -57,21 +58,25 @@ def main():
     TEMPLATE_XML = DATA_DIR / "simulation_template.xml"
 
     INPUT_DIR = Path("input")
-
     OUTPUT_DIR = Path("output")
+
+    INPUT_JSON =  INPUT_DIR / "input.json"
+    
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     OUTSIM_XML = OUTPUT_DIR / "simulation.xml"
     OUTPOS_DAT = OUTPUT_DIR / "positions.dat"
 
-    INPUT_JSON =  INPUT_DIR / "input.json"
+    NETWORK_PNG = OUTPUT_DIR / "network.png"
         
     # Read the JSON configuration
     with open(INPUT_JSON, 'r', encoding='utf-8') as f:
         sim_model = json.load(f)
-
+          
     # Run the conversion
     convert_simulation_files(sim_model, TEMPLATE_XML, OUTSIM_XML, OUTPOS_DAT)
+
+    plot_network(NETWORK_PNG, sim_model)
 
     # Final messages
     print(f"✅ Simulation successfully generated from '{INPUT_JSON}'.")

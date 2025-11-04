@@ -1,9 +1,11 @@
 import json
 import re
 import pandas as pd
-import ipaddress
 from pathlib import Path
 import matplotlib.pyplot as plt
+
+from library.plots import lines_plot, boxes_plot, bars_plot
+from library.throughput import throughput_compute_and_plot
 
 # Try to use seaborn for boxplots; fall back to matplotlib if not available
 try:
@@ -41,12 +43,6 @@ def convert_log_to_csv(log_path: Path, csv_output: Path) -> pd.DataFrame:
     df.to_csv(csv_output, index=False)
     return df
 
-def _last_hextet_decimal(addr: str) -> int:
-    addr = addr.split('%', 1)[0]
-    ipv6 = ipaddress.IPv6Address(addr)
-    hextets = ipv6.exploded.split(':')
-    return int(hextets[-1], 16)
-
 def process_log(
     log_path: Path,
     csv_full_output: Path,
@@ -81,8 +77,7 @@ def process_log(
         "hops",
     ]
     metrics_cols = [c for c in desired_metrics if c in df.columns]
-
-    # --------------------------- Line plots --------------------------------
+    
     dir_plots_output.mkdir(parents=True, exist_ok=True)
     dir_lines = dir_plots_output / "lines"
     dir_boxes = dir_plots_output / "boxes"
@@ -91,45 +86,17 @@ def process_log(
     dir_boxes.mkdir(exist_ok=True)
     dir_bars.mkdir(exist_ok=True)
 
-    unique_nodes = df["node"].unique()
-
-    for metric in metrics_cols:
-        plt.figure(figsize=(12, 6))
-        for node in unique_nodes:
-            node_df = df[df["node"] == node]
-            if metric not in node_df.columns:
-                continue
-            plt.plot(
-                node_df["root_time_now"],
-                node_df[metric],
-                label=f"{_last_hextet_decimal(node)}",
-            )
-        plt.title(f"{metric} over time")
-        plt.xlabel("root_time_now (ms)")
-        plt.ylabel(metric)
-
-        # Legend outside the chart (to the right)
-        plt.legend(
-            loc="center left",
-            bbox_to_anchor=(1.02, 0.5),
-            fontsize="small",
-            frameon=False
-        )
-
-        plt.grid(True, linestyle="--", alpha=0.5)
-        plt.tight_layout()
-
-        safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
-        out_path = dir_lines / f"{safe_metric}.png"
-        plt.savefig(out_path, dpi=150)
-        plt.close()
-
-    # --------------------------- CSV of means  ------------------------------
+    # LINES chart
+    lines_plot(df, metrics_cols, dir_lines)
+    
     # Map numeric label 2,3,... per node (also used in plots)
     node_order = sorted(df["node"].astype(str).unique())
     node_to_labelnum = {n: i + 2 for i, n in enumerate(node_order)}
     df["label"] = df["node"].astype(str).map(node_to_labelnum)
 
+    # BOXES chart
+    boxes_plot(df, metrics_cols, dir_boxes)
+     
     # Means per node
     if metrics_cols:
         means_df = (
@@ -153,122 +120,87 @@ def process_log(
     else:
         print("(no metrics found to compute means)")
 
-    # --------------------------- Boxplots --------------------------------------
-    for metric in metrics_cols:
-        safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
-        out_path = dir_boxes / f"{safe_metric}.png"
-
-        fdf = df.dropna(subset=[metric])
-        if fdf.empty:
-            continue
-
-        if sns is not None:
-            fig, ax = plt.subplots(figsize=(12, 6))
-            sns.boxplot(
-                data=fdf,
-                x="label", y=metric, hue="node",
-                ax=ax, showcaps=True, width=0.6
-            )
-            # Remove legend
-            if ax.get_legend():
-                ax.get_legend().remove()
-            ax.set_title(metric)
-            ax.set_xlabel("")
-            ax.set_ylabel(metric)
-            ax.grid(True, linestyle="--", alpha=0.5)
-            sns.despine(ax=ax)
-            fig.tight_layout()
-            fig.savefig(out_path, dpi=150)
-            plt.close(fig)
-        else:
-            # Fallback
-            fdf = fdf.copy()
-            fdf["_cat"] = fdf["label"].astype(str) + " | " + fdf["node"].astype(str)
-            cats = list(fdf["_cat"].unique())
-            data = [fdf.loc[fdf["_cat"] == c, metric].dropna().values for c in cats]
-
-            fig, ax = plt.subplots(figsize=(12, 4))
-            ax.boxplot(data, patch_artist=True, widths=0.6, showcaps=True)
-            ax.set_xticks(range(1, len(cats) + 1))
-            ax.set_xticklabels(cats, rotation=20, ha="right")
-            ax.set_title(f"{metric} (non-seaborn)")
-            ax.set_xlabel("")
-            ax.set_ylabel(metric)
-            ax.grid(True, linestyle="--", alpha=0.5)
-            fig.tight_layout()
-            fig.savefig(out_path, dpi=150)
-            plt.close(fig)
-
-    # --------------------------- Bar charts (means) -------------------------------
-    # For each metric, plot bars showing the mean per node (X-axis = label 2,3,...)
+    # BARS chart
     if not means_df.empty:
-        # Prepare table (node, label, mean_value) for each metric
-        for metric in metrics_cols:
-            if metric not in means_df.columns:
-                continue
-
-            safe_metric = re.sub(r"[^A-Za-z0-9_\-]+", "_", metric).strip("_")
-            out_path = dir_bars / f"{safe_metric}.png"
-
-            bdf = means_df[["node", "label", metric]].dropna().copy()
-            # Sort by label (numeric)
-            bdf = bdf.sort_values("label")
-
-            fig, ax = plt.subplots(figsize=(10, 5))
-            if sns is not None:
-                sns.barplot(data=bdf, x="label", y=metric, ax=ax)
-            else:
-                ax.bar(bdf["label"].astype(str).values, bdf[metric].values)
-
-            ax.set_title(f"{metric} (mean per node)")
-            ax.set_xlabel("Node (numeric label starting from 2)")
-            ax.set_ylabel(metric)
-            ax.grid(True, linestyle="--", alpha=0.5, axis="y")
-            fig.tight_layout()
-            fig.savefig(out_path, dpi=150)
-            plt.close(fig)
+        bars_plot(means_df, metrics_cols, dir_bars)
+            
             
     for c in ["server_sent", "server_received"]:
         if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce")
+            df[c] = pd.to_numeric(df[c], errors="coerce")            
             
-    # ---------- Bar charts (accumulated per node via MAX from raw data) ----------
-    # server_sent_max and server_received_max
-    raw_cols = [c for c in ["server_sent", "server_received"] if c in df.columns]
+    # ---------- Grouped bar chart: 4 bars per node (max in raw data) ----------
+    raw_cols = [c for c in ["server_sent", "server_received", "total_sent", "total_received"] if c in df.columns]
     if raw_cols:
         max_df = (
             df.groupby("node")[raw_cols]
               .max(numeric_only=True)
               .rename(columns={
-                  "server_sent": "server_sent_max",
-                  "server_received": "server_received_max"
+                  "server_sent":     "server_sent_max",
+                  "server_received": "server_received_max",
+                  "total_sent":      "total_sent_max",
+                  "total_received":  "total_received_max"
               })
               .reset_index()
         )
-        # Map label 2,3,... to maintain the same visual order
+
+        # Map numeric labels 2,3,... in the same order
         node_order = sorted(df["node"].astype(str).unique())
         node_to_labelnum = {n: i + 2 for i, n in enumerate(node_order)}
         max_df["label"] = max_df["node"].astype(str).map(node_to_labelnum)
         max_df = max_df.sort_values("label")
 
-        for col in ["server_sent_max", "server_received_max"]:
-            if col not in max_df.columns:
-                continue
+        # Keep only columns that actually exist
+        value_vars = [c for c in ["server_sent_max", "server_received_max", "total_sent_max", "total_received_max"] if c in max_df.columns]
 
-            safe_name = re.sub(r"[^A-Za-z0-9_\-]+", "_", col).strip("_")
-            out_path = (dir_bars / f"{safe_name}.png")
+        out_path = dir_bars / "counters_max_grouped.png"
 
-            fig, ax = plt.subplots(figsize=(10, 5))
-            if sns is not None:
-                sns.barplot(data=max_df, x="label", y=col, ax=ax)
-            else:
-                ax.bar(max_df["label"].astype(str).values, max_df[col].values)
+        if sns is not None:
+            # --- using seaborn (simpler) ---
+            plot_df = max_df.melt(
+                id_vars=["node", "label"],
+                value_vars=value_vars,
+                var_name="kind",
+                value_name="value"
+            )
+            fig, ax = plt.subplots(figsize=(12, 6))
+            sns.barplot(data=plot_df, x="label", y="value", hue="kind", ax=ax)
 
-            # Titles/labels
-            ax.set_title(f"{col} (maximum observed per node in raw data)")
+            ax.set_title("Counters (max per node in raw data) — grouped")
             ax.set_xlabel("Node (numeric label starting from 2)")
-            ax.set_ylabel(col)
+            ax.set_ylabel("count (max)")
             ax.grid(True, linestyle="--", alpha=0.5, axis="y")
             fig.tight_layout()
             fig.savefig(out_path, dpi=150)
             plt.close(fig)
+        else:
+            # --- matplotlib fallback: manually grouped bars ---
+            import numpy as np  # local import to avoid changing the file's top imports
+
+            x = np.arange(len(max_df))  # one position per node
+            K = len(value_vars)
+            total_width = 0.8
+            width = total_width / max(1, K)
+            offsets = (np.arange(K) - (K - 1) / 2) * width
+
+            fig, ax = plt.subplots(figsize=(12, 6))
+            for i, col in enumerate(value_vars):
+                ax.bar(
+                    x + offsets[i],
+                    max_df[col].values,
+                    width=width,
+                    label=col
+                )
+
+            ax.set_xticks(x)
+            ax.set_xticklabels(max_df["label"].astype(str).tolist())
+            ax.set_title("Counters (max per node in raw data) — grouped")
+            ax.set_xlabel("Node (numeric label starting from 2)")
+            ax.set_ylabel("count (max)")
+            ax.legend(title="kind", fontsize="small")
+            ax.grid(True, linestyle="--", alpha=0.5, axis="y")
+            fig.tight_layout()
+            fig.savefig(out_path, dpi=150)
+            plt.close(fig)
+   
+    throughput_compute_and_plot(df, csv_means_output, dir_lines, dir_boxes)

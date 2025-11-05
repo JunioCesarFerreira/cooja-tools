@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Graph Builder — import/export SimLab JSON</title>
+  <style>
+    :root { --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#22d3ee; }
+    html,body { height:100%; margin:0; background:var(--bg); color:var(--text); font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto; }
+    #app { display:grid; grid-template-rows:auto 1fr; height:100dvh; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; padding:12px 16px; background:var(--panel); box-shadow:0 1px 0 rgba(255,255,255,.05) inset; }
+    .toolbar .group { display:flex; align-items:center; gap:8px; }
+    .toolbar input[type="number"] { width:88px; padding:6px 8px; background:#111827; border:1px solid #334155; color:#e5e7eb; border-radius:8px; }
+    .btn { background:#1f2937; border:1px solid #334155; color:var(--text); padding:8px 12px; border-radius:10px; cursor:pointer; }
+    .btn:hover { background:#273549; }
+    .hint { color:var(--muted); margin-left:auto; }
+    canvas { display:block; width:100%; height:100%; cursor:crosshair; }
+    .kbd { font:600 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; color:#cbd5e1; background:#0b1220; border:1px solid #1e293b; border-bottom-width:2px; padding:2px 6px; border-radius:6px; }
+    input[type="file"] { display:none; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="toolbar">
+      <div class="group">
+        <label for="radius">Raio 1 (ligação):</label>
+        <input id="radius" type="number" min="0" step="1" v-model.number="state.linkRadius">
+      </div>
+      <div class="group">
+        <label for="radius2">Raio 2 (visualização):</label>
+        <input id="radius2" type="number" min="0" step="1" v-model.number="state.outerRadius">
+      </div>
+
+      <div class="group">
+        <label>X:</label>
+        <input type="number" v-model.number="state.region.x" @change="fitRegion()">
+        <label>Y:</label>
+        <input type="number" v-model.number="state.region.y" @change="fitRegion()">
+        <label>W:</label>
+        <input type="number" min="10" v-model.number="state.region.w" @change="fitRegion()">
+        <label>H:</label>
+        <input type="number" min="10" v-model.number="state.region.h" @change="fitRegion()">
+        <button class="btn" @click="fitRegion()">Ajustar zoom</button>
+      </div>
+
+      <div class="group">
+        <label>
+          <input type="checkbox" v-model="state.addOnClick" /> Adicionar nó no clique
+        </label>
+      </div>
+
+      <div class="group">
+        <button class="btn" @click="addRandomNode()">+ Nó aleatório</button>
+        <button class="btn" @click="clearAll()">Limpar</button>
+        <button class="btn" @click="downloadJson()">Exportar JSON</button>
+      </div>
+
+      <div class="group">
+        <button class="btn" @click="triggerImport()">Importar JSON (SimLab)</button>
+        <input ref="fileInput" type="file" accept="application/json" @change="onImport">
+      </div>
+
+      <div class="group">
+        <label><input type="checkbox" v-model="state.showMobilePaths"> Trajetórias móveis</label>
+      </div>
+
+      <div class="hint">Arraste nós; <span class="kbd">Shift</span> atrai vizinhos. Importa/Exporta no formato SimLab.</div>
+    </div>
+    <canvas ref="canvas" @mousedown="onDown" @mousemove="onMove" @mouseup="onUp" @mouseleave="onUp" @click="onClick"></canvas>
+  </div>
+
+  <script type="module">
+    import { createApp, reactive, ref, onMounted, watch } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+    createApp({
+      setup() {
+        const canvas = ref(null)
+        const ctx = ref(null)
+        const fileInput = ref(null)
+
+        const state = reactive({
+          meta: { name: 'single-experiment-sim-lab', duration: 60 },
+          linkRadius: 120,
+          outerRadius: 200,
+          nodes: [],
+          mobilePaths: [],
+          mobileMotesRaw: [],
+          draggingId: null,
+          dragOffset: { x: 0, y: 0 },
+          addOnClick: true,
+          showMobilePaths: true,
+          region: { x: 0, y: 0, w: 800, h: 500 },
+          viewport: { scale: 1, tx: 0, ty: 0 },
+          nodeScreenRadius: 7,
+        })
+
+        // Mantém outerRadius >= linkRadius
+        watch(() => state.linkRadius, v => { if (state.outerRadius < v) state.outerRadius = v })
+
+        const DPR = window.devicePixelRatio || 1
+        function resizeCanvas() {
+          const el = canvas.value
+          const rect = el.getBoundingClientRect()
+          el.width = Math.floor(rect.width * DPR)
+          el.height = Math.floor(rect.height * DPR)
+          ctx.value.setTransform(DPR, 0, 0, DPR, 0, 0)
+          fitRegion()
+        }
+
+        function worldToScreen(pt){
+          const { scale, tx, ty } = state.viewport
+          return { x: pt.x * scale + tx, y: pt.y * scale + ty }
+        }
+        function screenToWorld(pt){
+          const { scale, tx, ty } = state.viewport
+          return { x: (pt.x - tx) / scale, y: (pt.y - ty) / scale }
+        }
+
+        function fitRegion() {
+          const c = canvas.value
+          if (!c) return
+          const cw = c.width / DPR, ch = c.height / DPR
+          const m = 20
+          const { x, y, w, h } = state.region
+          const sx = (cw - 2*m) / Math.max(w, 1)
+          const sy = (ch - 2*m) / Math.max(h, 1)
+          const scale = Math.max(0.0001, Math.min(sx, sy))
+          const tx = m - x * scale
+          const ty = m - y * scale
+          state.viewport.scale = scale
+          state.viewport.tx = tx
+          state.viewport.ty = ty
+        }
+
+        function worldPos(evt) {
+          const rect = canvas.value.getBoundingClientRect()
+          const p = { x: evt.clientX - rect.left, y: evt.clientY - rect.top }
+          return screenToWorld(p)
+        }
+
+        function clampToRegion(x, y){
+          const { x:rx, y:ry, w, h } = state.region
+          const cx = Math.min(Math.max(x, rx), rx + w)
+          const cy = Math.min(Math.max(y, ry), ry + h)
+          return { x: cx, y: cy }
+        }
+
+        function nextNodeName(){
+          let k = 1
+          const used = new Set(state.nodes.map(n => n.name))
+          while (used.has(`node${k}`)) k++
+          return `node${k}`
+        }
+
+        function addNodeAt(x, y, name = nextNodeName(), sourceCode = 'node.c') {
+          const id = crypto.randomUUID()
+          const p = clampToRegion(x, y)
+          state.nodes.push({ id, x: p.x, y: p.y, name, sourceCode })
+        }
+
+        function addRandomNode() {
+          const { x, y, w, h } = state.region
+          const pad = 10
+          const nx = Math.random() * (w - 2*pad) + (x + pad)
+          const ny = Math.random() * (h - 2*pad) + (y + pad)
+          addNodeAt(nx, ny)
+        }
+
+        function clearAll() { state.nodes = []; state.mobilePaths = []; state.mobileMotesRaw = [] }
+
+        function hitTest(p) {
+          const r = Math.max(10 / state.viewport.scale, (state.nodeScreenRadius + 2) / state.viewport.scale)
+          for (let i = state.nodes.length - 1; i >= 0; i--) {
+            const n = state.nodes[i]
+            const dx = p.x - n.x, dy = p.y - n.y
+            if (dx*dx + dy*dy <= r*r) return n.id
+          }
+          return null
+        }
+
+        function getNode(id) { return state.nodes.find(n => n.id === id) }
+
+        function onClick(evt) {
+          if (!state.addOnClick) return
+          const p = worldPos(evt)
+          if (!hitTest(p)) addNodeAt(p.x, p.y)
+        }
+
+        function onDown(evt) {
+          const p = worldPos(evt)
+          const id = hitTest(p)
+          if (id) {
+            state.draggingId = id
+            const n = getNode(id)
+            state.dragOffset.x = p.x - n.x
+            state.dragOffset.y = p.y - n.y
+          }
+        }
+
+        function onMove(evt) {
+          if (!state.draggingId) return
+          const p = worldPos(evt)
+          const n = getNode(state.draggingId)
+          if (!n) return
+          const nx = p.x - state.dragOffset.x
+          const ny = p.y - state.dragOffset.y
+          const clamped = clampToRegion(nx, ny)
+          n.x = clamped.x
+          n.y = clamped.y
+
+          if (evt.shiftKey) {
+            const R2 = state.linkRadius * state.linkRadius
+            for (const m of state.nodes) {
+              if (m.id === n.id) continue
+              const dx = m.x - n.x, dy = m.y - n.y
+              const d2 = dx*dx + dy*dy
+              if (d2 < R2 && d2 > 1) {
+                const d = Math.sqrt(d2)
+                const k = 0.02 * (1 - d / state.linkRadius)
+                m.x = Math.min(Math.max(m.x - dx * k, state.region.x), state.region.x + state.region.w)
+                m.y = Math.min(Math.max(m.y - dy * k, state.region.y), state.region.y + state.region.h)
+              }
+            }
+          }
+        }
+
+        function onUp() { state.draggingId = null }
+
+        // ------------------------ IMPORT (SimLab JSON) ------------------------
+        function triggerImport(){
+          // garante reset do input antes do clique (evita ignorar mesmo arquivo)
+          if (fileInput.value) fileInput.value.value = ''
+          fileInput.value?.click()
+        }
+
+        async function onImport(evt){
+          const f = evt.target.files?.[0]
+          if (!f) return
+          try {
+            const text = await f.text()
+            const json = JSON.parse(text)
+            loadSimLab(json) // substitui tudo
+            console.info('[GraphBuilder] Import OK:', json?.name ?? '(sem nome)')
+          } catch (e) {
+            console.error('[GraphBuilder] Falha ao importar JSON:', e)
+            alert('Falha ao ler JSON: ' + e)
+          } finally {
+            // reseta input para permitir importar o mesmo arquivo novamente
+            evt.target.value = ''
+          }
+        }
+
+        function loadSimLab(cfg){
+          if (!cfg || typeof cfg !== 'object') throw new Error('Config inválida')
+
+          // ===== SUBSTITUI TUDO =====
+          // limpa primeiro para evitar resíduos
+          state.nodes = []
+          state.mobilePaths = []
+          state.mobileMotesRaw = []
+
+          // Meta
+          state.meta.name = typeof cfg.name === 'string' ? cfg.name : 'single-experiment-sim-lab'
+          state.meta.duration = Number.isFinite(cfg.duration) ? cfg.duration : 60
+
+          // Raios
+          state.linkRadius = Number.isFinite(cfg.radiusOfReach) ? cfg.radiusOfReach : state.linkRadius
+          const inter = Number.isFinite(cfg.radiusOfInter) ? cfg.radiusOfInter : state.outerRadius
+          state.outerRadius = Math.max(state.linkRadius || 0, inter)
+
+          // Região [xmin, ymin, xmax, ymax]
+          if (Array.isArray(cfg.region) && cfg.region.length === 4){
+            const [xmin, ymin, xmax, ymax] = cfg.region.map(Number)
+            state.region = { x: xmin, y: ymin, w: xmax - xmin, h: ymax - ymin }
+          }
+
+          // Fixed motes
+          const fixed = cfg?.simulationElements?.fixedMotes ?? []
+          for (const m of fixed){
+            const pos = Array.isArray(m.position) ? m.position.map(Number) : null
+            if (pos && pos.length === 2 && Number.isFinite(pos[0]) && Number.isFinite(pos[1])){
+              const name = typeof m.name === 'string' ? m.name : undefined
+              const src = typeof m.sourceCode === 'string' ? m.sourceCode : 'node.c'
+              addNodeAt(pos[0], pos[1], name, src)
+            }
+          }
+
+          // Mobile motes (mantém o bruto e gera trilhas)
+          const mobiles = Array.isArray(cfg?.simulationElements?.mobileMotes) ? cfg.simulationElements.mobileMotes : []
+          state.mobileMotesRaw = mobiles
+          state.mobilePaths = buildMobilePaths(mobiles)
+
+          // Ajusta viewport
+          fitRegion()
+        }
+
+        // ------------------------ Helpers p/ mobile paths ---------------------
+        function sanitizeExpr(expr){
+          return String(expr)
+            .replaceAll(/np\.pi/g, 'Math.PI')
+            .replaceAll(/np\./g, 'Math.')
+        }
+
+        function makeFunc(expr){
+          const body = 'return (' + sanitizeExpr(expr) + ')'
+          try { return new Function('t','Math', body) }
+          catch(_){ return () => NaN }
+        }
+
+        function buildMobilePaths(mobiles){
+          const res = []
+          const STEPS = 60
+          for (const m of mobiles){
+            const fnPath = Array.isArray(m.functionPath) ? m.functionPath : []
+            const segments = fnPath.map(([ex, ey]) => ({ fx: makeFunc(ex), fy: makeFunc(ey) }))
+            const pts = []
+            for (const seg of segments){
+              for (let k = 0; k <= STEPS; k++){
+                const t = k / STEPS
+                const x = Number(seg.fx(t, Math))
+                const y = Number(seg.fy(t, Math))
+                if (Number.isFinite(x) && Number.isFinite(y)){
+                  const p = clampToRegion(x, y)
+                  pts.push(p)
+                }
+              }
+            }
+            res.push({ name: m.name || 'mobile', points: pts })
+          }
+          return res
+        }
+
+        // ------------------------------- DRAW --------------------------------
+        function draw() {
+          const c = canvas.value
+          const g = ctx.value
+          g.clearRect(0, 0, c.width, c.height)
+
+          // WORLD SPACE
+          g.save()
+          const { scale, tx, ty } = state.viewport
+          g.translate(tx, ty)
+          g.scale(scale, scale)
+
+          // Region
+          g.save()
+          g.strokeStyle = 'rgba(250,204,21,0.8)'
+          g.lineWidth = 2 / scale
+          g.strokeRect(state.region.x, state.region.y, state.region.w, state.region.h)
+          g.restore()
+
+          // Grid
+          g.save()
+          g.strokeStyle = 'rgba(255,255,255,0.06)'
+          g.lineWidth = 1 / scale
+          const step = 24
+          const x0 = Math.floor(state.region.x / step) * step
+          const y0 = Math.floor(state.region.y / step) * step
+          for (let x = x0; x <= state.region.x + state.region.w; x += step) { g.beginPath(); g.moveTo(x, state.region.y); g.lineTo(x, state.region.y + state.region.h); g.stroke() }
+          for (let y = y0; y <= state.region.y + state.region.h; y += step) { g.beginPath(); g.moveTo(state.region.x, y); g.lineTo(state.region.x + state.region.w, y); g.stroke() }
+          g.restore()
+
+          // Mobile paths (dashed)
+          if (state.showMobilePaths && state.mobilePaths.length){
+            g.save()
+            g.strokeStyle = 'rgba(148,163,184,0.45)'
+            g.lineWidth = 1.5 / scale
+            g.setLineDash([6/scale, 6/scale])
+            for (const {points} of state.mobilePaths){
+              if (points.length < 2) continue
+              g.beginPath()
+              g.moveTo(points[0].x, points[0].y)
+              for (let i=1;i<points.length;i++) g.lineTo(points[i].x, points[i].y)
+              g.stroke()
+            }
+            g.setLineDash([])
+            g.restore()
+          }
+
+          // Links
+          g.save()
+          g.strokeStyle = 'rgba(34,211,238,0.7)'
+          g.lineWidth = 2 / scale
+          const R = state.linkRadius
+          const R2 = R*R
+          for (let i = 0; i < state.nodes.length; i++) {
+            for (let j = i+1; j < state.nodes.length; j++) {
+              const a = state.nodes[i], b = state.nodes[j]
+              const dx = a.x - b.x, dy = a.y - b.y
+              if (dx*dx + dy*dy <= R2) { g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke() }
+            }
+          }
+          g.restore()
+
+          // Nós e anéis
+          for (const n of state.nodes) {
+            const nodeR = state.nodeScreenRadius / scale
+
+            // Anel entre raio1 e raio2
+            if (state.outerRadius > state.linkRadius) {
+              g.save()
+              g.fillStyle = 'rgba(34,211,238,0.10)'
+              g.beginPath()
+              g.arc(n.x, n.y, state.outerRadius, 0, Math.PI*2, false)
+              g.arc(n.x, n.y, state.linkRadius, 0, Math.PI*2, true)
+              g.closePath(); g.fill(); g.restore()
+            }
+
+            // Nó
+            g.beginPath(); g.arc(n.x, n.y, nodeR, 0, Math.PI*2)
+            g.fillStyle = '#e5e7eb'; g.fill()
+            g.strokeStyle = '#0ea5e9'; g.lineWidth = 2 / scale; g.stroke()
+
+            // Raio 1
+            g.beginPath(); g.arc(n.x, n.y, state.linkRadius, 0, Math.PI*2)
+            g.strokeStyle = 'rgba(148,163,184,0.35)'; g.lineWidth = 1 / scale
+            g.setLineDash([6/scale,6/scale]); g.stroke()
+
+            // Raio 2
+            g.beginPath(); g.arc(n.x, n.y, state.outerRadius, 0, Math.PI*2)
+            g.strokeStyle = 'rgba(244,114,182,0.35)'; g.lineWidth = 1 / scale
+            g.setLineDash([2/scale,6/scale]); g.stroke(); g.setLineDash([])
+          }
+
+          g.restore() // END WORLD
+
+          // Labels (screen-space)
+          g.save()
+          g.font = '600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace'
+          g.textAlign = 'center'; g.textBaseline = 'middle'
+          for (let i = 0; i < state.nodes.length; i++) {
+            const n = state.nodes[i]
+            const sp = worldToScreen(n)
+            g.lineWidth = 3; g.strokeStyle = 'rgba(0,0,0,0.6)'; g.strokeText(String(i+1), sp.x, sp.y)
+            g.fillStyle = '#10b981'; g.fillText(String(i+1), sp.x, sp.y)
+          }
+          g.restore()
+
+          requestAnimationFrame(draw)
+        }
+
+        // ------------------------ EXPORT (SimLab JSON) -----------------------
+        function buildSimLabJson(){
+          const xmin = state.region.x
+          const ymin = state.region.y
+          const xmax = state.region.x + state.region.w
+          const ymax = state.region.y + state.region.h
+
+          const fixedMotes = state.nodes.map(n => ({
+            position: [Number(n.x), Number(n.y)],
+            name: n.name || '',
+            sourceCode: n.sourceCode || 'node.c'
+          }))
+
+          return {
+            name: state.meta.name,
+            duration: state.meta.duration,
+            radiusOfReach: Number(state.linkRadius),
+            radiusOfInter: Number(state.outerRadius),
+            region: [xmin, ymin, xmax, ymax],
+            simulationElements: {
+              fixedMotes,
+              mobileMotes: Array.isArray(state.mobileMotesRaw) ? state.mobileMotesRaw : []
+            }
+          }
+        }
+
+        function downloadJson() {
+          try {
+            const out = buildSimLabJson()
+            const json = JSON.stringify(out, null, 2)
+            const blob = new Blob([json], { type: 'application/json' })
+            const url = URL.createObjectURL(blob)
+            const a = document.createElement('a')
+            a.href = url
+            a.download = (state.meta.name || 'experiment') + '.json'
+            a.style.display = 'none'
+            document.body.appendChild(a)
+            // Em alguns iframes/navegadores, o link precisa estar no DOM para o download funcionar
+            a.click()
+            // Dá tempo do navegador iniciar o download antes de revogar a URL
+            setTimeout(() => {
+              URL.revokeObjectURL(url)
+              a.remove()
+            }, 200)
+          } catch (err) {
+            console.error('[GraphBuilder] Falha ao exportar JSON:', err)
+            alert('Falha ao exportar JSON: ' + err)
+          }
+        }
+
+        // ------------------------ TESTES (console) ---------------------------
+        function validateSimLabJsonShape(obj){
+          const ok = (cond, msg) => { if (!cond) throw new Error(msg) }
+          ok(obj && typeof obj === 'object', 'JSON raiz inválido')
+          ok('name' in obj, 'faltando name')
+          ok('duration' in obj, 'faltando duration')
+          ok('radiusOfReach' in obj, 'faltando radiusOfReach')
+          ok('radiusOfInter' in obj, 'faltando radiusOfInter')
+          ok(Array.isArray(obj.region) && obj.region.length === 4, 'region inválida')
+          ok(obj.simulationElements && typeof obj.simulationElements === 'object', 'faltando simulationElements')
+          ok(Array.isArray(obj.simulationElements.fixedMotes), 'fixedMotes deve ser array')
+          ok(Array.isArray(obj.simulationElements.mobileMotes), 'mobileMotes deve ser array')
+        }
+
+        function runSmokeTests(){
+          try {
+            const out = buildSimLabJson()
+            validateSimLabJsonShape(out)
+            console.assert(out.radiusOfInter >= out.radiusOfReach, 'radiusOfInter >= radiusOfReach')
+            console.assert(out.simulationElements.fixedMotes.every(m => Array.isArray(m.position) && m.position.length === 2), 'cada fixedMote precisa de position [x,y]')
+            // Round-trip test sem alterar o estado do usuário
+            const snapshot = JSON.stringify({
+              state: {
+                meta: state.meta,
+                linkRadius: state.linkRadius,
+                outerRadius: state.outerRadius,
+                region: state.region,
+                nodes: state.nodes.slice(),
+                mobileMotesRaw: state.mobileMotesRaw.slice()
+              }
+            })
+            // Monta um JSON mínimo válido
+            const sample = {
+              name: 'rt-test', duration: 1, radiusOfReach: 10, radiusOfInter: 15,
+              region: [0,0,100,50],
+              simulationElements: { fixedMotes: [{position:[10,10], name:'n1', sourceCode:'node.c'}], mobileMotes: [] }
+            }
+            const savedHandlers = { addOnClick: state.addOnClick }
+            loadSimLab(sample)
+            const out2 = buildSimLabJson()
+            validateSimLabJsonShape(out2)
+            console.assert(out2.simulationElements.fixedMotes.length === 1, 'round-trip count')
+            // Restaura snapshot
+            const snap = JSON.parse(snapshot)
+            state.meta = { ...snap.state.meta }
+            state.linkRadius = snap.state.linkRadius
+            state.outerRadius = snap.state.outerRadius
+            state.region = { ...snap.state.region }
+            state.nodes = snap.state.nodes
+            state.mobileMotesRaw = snap.state.mobileMotesRaw
+            state.mobilePaths = buildMobilePaths(state.mobileMotesRaw)
+            state.addOnClick = savedHandlers.addOnClick
+            fitRegion()
+            console.log('[GraphBuilder] Smoke tests OK (export format + round-trip)')
+          } catch(err){
+            console.warn('[GraphBuilder] Smoke tests falharam:', err)
+          }
+        }
+
+        onMounted(() => {
+          ctx.value = canvas.value.getContext('2d')
+          const ro = new ResizeObserver(resizeCanvas)
+          ro.observe(canvas.value)
+          resizeCanvas()
+          requestAnimationFrame(draw)
+          runSmokeTests()
+        })
+
+        // Reajusta quando a região muda
+        watch(() => ({...state.region}), () => fitRegion())
+
+        return { state, canvas, fileInput, onDown, onMove, onUp, onClick, addRandomNode, clearAll, downloadJson, fitRegion, triggerImport, onImport }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>

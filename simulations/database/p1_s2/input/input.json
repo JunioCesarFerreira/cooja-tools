@@ -1,0 +1,242 @@
+{
+  "name": "single-experiment-sim-lab",
+  "duration": 60,
+  "radiusOfReach": 50,
+  "radiusOfInter": 60,
+  "region": [
+    -200,
+    -100,
+    200,
+    100
+  ],
+  "simulationElements": {
+    "fixedMotes": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "name": "root",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -28,
+          34
+        ],
+        "name": "node1",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -105.33333333333334,
+          -23.666666666666668
+        ],
+        "name": "node2",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -91,
+          -59
+        ],
+        "name": "node3",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -12,
+          -42.83333333333333
+        ],
+        "name": "node4",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          19,
+          37
+        ],
+        "name": "node5",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          64.66666666666666,
+          29
+        ],
+        "name": "node6",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          102.66666666666667,
+          2.9999999999999996
+        ],
+        "name": "node7",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          115,
+          -35.33333333333333
+        ],
+        "name": "node8",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          87,
+          44
+        ],
+        "name": "node9",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -73.47885710671174,
+          37.08103821066912
+        ],
+        "name": "node10",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          29.47736035742806,
+          -58.36855963756604
+        ],
+        "name": "node11",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -49.03573903173938,
+          -69.70902258243518
+        ],
+        "name": "node12",
+        "sourceCode": "node.c"
+      }
+    ],
+    "mobileMotes": [
+      {
+        "functionPath": [
+          [
+            "70",
+            "44 + 31 * t"
+          ],
+          [
+            "70 - 140 * t",
+            "75"
+          ],
+          [
+            "-70",
+            "75 - 31 * t"
+          ],
+          [
+            "-70 + 140 * t",
+            "44"
+          ]
+        ],
+        "isClosed": true,
+        "isRoundTrip": false,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node13",
+        "sourceCode": "node.c"
+      },
+      {
+        "functionPath": [
+          [
+            "117 + 24 * np.cos(2 * np.pi * t)",
+            "-28 + 52 * np.sin(2 * np.pi * t)"
+          ]
+        ],
+        "isClosed": true,
+        "isRoundTrip": false,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node14",
+        "sourceCode": "node.c"
+      },
+      {
+        "functionPath": [
+          [
+            "-114*(1-t)-64*t",
+            "61*(1-t)+20*t"
+          ],
+          [
+            "-64",
+            "20-82*t"
+          ],
+          [
+            "-64+136*t",
+            "-62"
+          ]
+        ],
+        "isClosed": false,
+        "isRoundTrip": true,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node15",
+        "sourceCode": "node.c"
+      },
+      {
+        "functionPath": [
+          [
+            "-134+50*t",
+            "16"
+          ],
+          [
+            "-84",
+            "16-98*t"
+          ],
+          [
+            "-84-50*t",
+            "-82"
+          ],
+          [
+            "-134",
+            "-82+98*t"
+          ]
+        ],
+        "isClosed": true,
+        "isRoundTrip": false,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node16",
+        "sourceCode": "node.c"
+      },
+      {
+        "functionPath": [
+          [
+            "114*(1-t)+56*t",
+            "80*(1-t)-33*t"
+          ],
+          [
+            "56 - 77*t",
+            "-33"
+          ]
+        ],
+        "isClosed": false,
+        "isRoundTrip": true,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node17",
+        "sourceCode": "node.c"
+      },
+      {
+        "functionPath": [
+          [
+            "-54+108*t",
+            "-81"
+          ]
+        ],
+        "isClosed": false,
+        "isRoundTrip": true,
+        "speed": 5,
+        "timeStep": 1,
+        "name": "node18",
+        "sourceCode": "node.c"
+      }
+    ]
+  }
+}

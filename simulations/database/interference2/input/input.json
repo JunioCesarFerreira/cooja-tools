@@ -1,0 +1,57 @@
+{
+  "name": "single-experiment-sim-lab",
+  "duration": 60,
+  "radiusOfReach": 100,
+  "radiusOfInter": 200,
+  "region": [
+    -200,
+    -200,
+    200,
+    200
+  ],
+  "simulationElements": {
+    "fixedMotes": [
+      {
+        "position": [
+          0,
+          0
+        ],
+        "name": "node1",
+        "sourceCode": "root.c"
+      },
+      {
+        "position": [
+          0,
+          50
+        ],
+        "name": "node2",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -110,
+          25
+        ],
+        "name": "node2",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -59.473684210526315,
+          -47.89473684210527
+        ],
+        "name": "node3",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -134.21052631578948,
+          25.263157894736842
+        ],
+        "name": "node4",
+        "sourceCode": "node.c"
+      }
+    ],
+    "mobileMotes": []
+  }
+}

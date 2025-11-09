@@ -1,0 +1,41 @@
+{
+  "name": "single-experiment-sim-lab",
+  "duration": 60,
+  "radiusOfReach": 100,
+  "radiusOfInter": 200,
+  "region": [
+    -200,
+    -200,
+    200,
+    200
+  ],
+  "simulationElements": {
+    "fixedMotes": [
+      {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "name": "node1",
+        "sourceCode": "root.c"
+      },
+      {
+        "position": [
+          0.0,
+          50.0
+        ],
+        "name": "node2",
+        "sourceCode": "node.c"
+      },
+      {
+        "position": [
+          -110.0,
+          25.0
+        ],
+        "name": "node2",
+        "sourceCode": "node.c"
+      }
+    ],
+    "mobileMotes": []
+  }
+}

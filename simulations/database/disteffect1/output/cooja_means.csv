@@ -1,0 +1,2 @@
+node,rtt_latency,r2n_latency,n2r_latency,rssi,radio_rx_energy_mj,radio_tx_energy_mj,cpu_energy_mj,lost_packets_r2n,lost_packets_n2r,hops,label
+fd00::202:2:2:2,58.097,45.385,43.885,-17.947,8.044,0.0,18.056,0.018,0.018,0.0,2

@@ -1,0 +1,1064 @@
+Random seed: 123456
+Initializing simulation script
+Time: 236000
+[Mote:2] [INFO: Main      ] - Routing: RPL Lite
+[Mote:2] [INFO: Main      ] - Net: sicslowpan
+[Mote:2] [INFO: Main      ] - MAC: TSCH
+[Mote:2] [INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[Mote:2] [INFO: Main      ] - 802.15.4 TSCH default hopping sequence length: 4
+[Mote:2] [INFO: Main      ] Node ID: 2
+[Mote:2] [INFO: Main      ] Link-layer address: 0002.0002.0002.0002
+[Mote:2] [INFO: Main      ] Tentative link-local IPv6 address: fe80::202:2:2:2
+[Mote:1] [INFO: Main      ] Starting Contiki-NG-develop/v5.0
+[Mote:1] [INFO: Main      ] - Routing: RPL Lite
+[Mote:1] [INFO: Main      ] - Net: sicslowpan
+[Mote:1] [INFO: Main      ] - MAC: TSCH
+[Mote:1] [INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[Mote:1] [INFO: Main      ] - 802.15.4 TSCH default hopping sequence length: 4
+[Mote:1] [INFO: Main      ] Node ID: 1
+[Mote:1] [INFO: Main      ] Link-layer address: 0001.0001.0001.0001
+[Mote:1] [INFO: Main      ] Tentative link-local IPv6 address: fe80::201:1:1:1
+[Mote:1] UDP Root process started
+[Mote:3] [INFO: Main      ] Starting Contiki-NG-develop/v5.0
+[Mote:3] [INFO: Main      ] - Routing: RPL Lite
+[Mote:3] [INFO: Main      ] - Net: sicslowpan
+[Mote:3] [INFO: Main      ] - MAC: TSCH
+[Mote:3] [INFO: Main      ] - 802.15.4 PANID: 0xabcd
+[Mote:3] [INFO: Main      ] - 802.15.4 TSCH default hopping sequence length: 4
+[Mote:3] [INFO: Main      ] Node ID: 3
+[Mote:3] [INFO: Main      ] Link-layer address: 0003.0003.0003.0003
+[Mote:3] [INFO: Main      ] Tentative link-local IPv6 address: fe80::203:3:3:3
+[Mote:2] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":37, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":23, "node_time":20901, "total_sent":1, "total_received":0, "bytes_tx":60, "bytes_rx":0, "r2n_latency":0, "lqi":0, "rssi":0, "server_sent":0, "server_received":1, "server_bytes_rx":60, "n2r_latency":29, "hops":0, "rtt_latency":0, "root_time_now":20930}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":31432, "total_sent":2, "total_received":1, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":1, "server_received":3, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":57, "root_time_now":31500}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":41963, "total_sent":3, "total_received":2, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":2, "server_received":5, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":62, "root_time_now":42000}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":52494, "total_sent":4, "total_received":3, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":3, "server_received":7, "server_bytes_rx":60, "n2r_latency":146, "hops":0, "rtt_latency":67, "root_time_now":52640}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":63025, "total_sent":5, "total_received":4, "bytes_tx":60, "bytes_rx":12, "r2n_latency":144, "lqi":100, "rssi":-52, "server_sent":4, "server_received":9, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":107, "root_time_now":63070}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":73556, "total_sent":6, "total_received":5, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":5, "server_received":11, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":42, "root_time_now":73570}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":84087, "total_sent":7, "total_received":6, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":6, "server_received":13, "server_bytes_rx":60, "n2r_latency":53, "hops":0, "rtt_latency":47, "root_time_now":84140}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":94618, "total_sent":8, "total_received":7, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":7, "server_received":15, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":52, "root_time_now":94640}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":105151, "total_sent":9, "total_received":8, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":8, "server_received":17, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":92, "root_time_now":105210}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":115680, "total_sent":10, "total_received":9, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":9, "server_received":19, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":62, "root_time_now":115710}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":126211, "total_sent":11, "total_received":10, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":10, "server_received":21, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":67, "root_time_now":126280}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":136744, "total_sent":12, "total_received":11, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":11, "server_received":23, "server_bytes_rx":60, "n2r_latency":36, "hops":0, "rtt_latency":72, "root_time_now":136780}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":147275, "total_sent":13, "total_received":12, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":12, "server_received":25, "server_bytes_rx":60, "n2r_latency":5, "hops":0, "rtt_latency":42, "root_time_now":147280}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":157804, "total_sent":14, "total_received":13, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":13, "server_received":27, "server_bytes_rx":60, "n2r_latency":46, "hops":0, "rtt_latency":47, "root_time_now":157850}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":168337, "total_sent":15, "total_received":14, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":14, "server_received":29, "server_bytes_rx":60, "n2r_latency":13, "hops":0, "rtt_latency":52, "root_time_now":168350}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":178868, "total_sent":16, "total_received":15, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":15, "server_received":31, "server_bytes_rx":60, "n2r_latency":52, "hops":0, "rtt_latency":57, "root_time_now":178920}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":189399, "total_sent":17, "total_received":16, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":16, "server_received":33, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":62, "root_time_now":189420}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":199930, "total_sent":18, "total_received":17, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":18, "server_received":35, "server_bytes_rx":60, "n2r_latency":61, "hops":0, "rtt_latency":67, "root_time_now":199991}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":210459, "total_sent":19, "total_received":19, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":19, "server_received":38, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":42, "root_time_now":210490}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":220990, "total_sent":20, "total_received":20, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":20, "server_received":40, "server_bytes_rx":60, "n2r_latency":70, "hops":0, "rtt_latency":47, "root_time_now":221060}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":231521, "total_sent":21, "total_received":21, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":21, "server_received":42, "server_bytes_rx":60, "n2r_latency":39, "hops":0, "rtt_latency":52, "root_time_now":231560}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":242054, "total_sent":22, "total_received":22, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":22, "server_received":44, "server_bytes_rx":60, "n2r_latency":6, "hops":0, "rtt_latency":57, "root_time_now":242060}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":252583, "total_sent":23, "total_received":23, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":23, "server_received":46, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":62, "root_time_now":252630}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":263114, "total_sent":24, "total_received":24, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":24, "server_received":48, "server_bytes_rx":60, "n2r_latency":16, "hops":0, "rtt_latency":67, "root_time_now":263130}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":273647, "total_sent":25, "total_received":25, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":25, "server_received":50, "server_bytes_rx":60, "n2r_latency":53, "hops":0, "rtt_latency":72, "root_time_now":273700}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":284178, "total_sent":26, "total_received":26, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":26, "server_received":52, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":42, "root_time_now":284200}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":294707, "total_sent":27, "total_received":27, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":27, "server_received":54, "server_bytes_rx":60, "n2r_latency":63, "hops":0, "rtt_latency":47, "root_time_now":294770}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":305238, "total_sent":28, "total_received":28, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":28, "server_received":56, "server_bytes_rx":60, "n2r_latency":32, "hops":0, "rtt_latency":52, "root_time_now":305270}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":315769, "total_sent":29, "total_received":29, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":29, "server_received":58, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":57, "root_time_now":315840}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":326302, "total_sent":30, "total_received":30, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":30, "server_received":60, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":62, "root_time_now":326340}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":336833, "total_sent":31, "total_received":31, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":31, "server_received":62, "server_bytes_rx":60, "n2r_latency":7, "hops":0, "rtt_latency":67, "root_time_now":336840}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":347362, "total_sent":32, "total_received":32, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":32, "server_received":64, "server_bytes_rx":60, "n2r_latency":48, "hops":0, "rtt_latency":72, "root_time_now":347410}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":357893, "total_sent":33, "total_received":33, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":33, "server_received":66, "server_bytes_rx":60, "n2r_latency":17, "hops":0, "rtt_latency":42, "root_time_now":357910}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":368426, "total_sent":34, "total_received":34, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":34, "server_received":68, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":47, "root_time_now":368480}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":378957, "total_sent":35, "total_received":35, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":35, "server_received":70, "server_bytes_rx":60, "n2r_latency":23, "hops":0, "rtt_latency":52, "root_time_now":378980}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":389488, "total_sent":36, "total_received":36, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":36, "server_received":72, "server_bytes_rx":60, "n2r_latency":62, "hops":0, "rtt_latency":57, "root_time_now":389550}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":400017, "total_sent":37, "total_received":37, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":38, "server_received":74, "server_bytes_rx":60, "n2r_latency":103, "hops":0, "rtt_latency":62, "root_time_now":400120}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":410548, "total_sent":38, "total_received":39, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":39, "server_received":77, "server_bytes_rx":60, "n2r_latency":72, "hops":0, "rtt_latency":72, "root_time_now":410620}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":421079, "total_sent":39, "total_received":40, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":40, "server_received":79, "server_bytes_rx":60, "n2r_latency":41, "hops":0, "rtt_latency":42, "root_time_now":421120}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":431612, "total_sent":40, "total_received":41, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":41, "server_received":81, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":47, "root_time_now":431620}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":442141, "total_sent":41, "total_received":42, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":42, "server_received":83, "server_bytes_rx":60, "n2r_latency":49, "hops":0, "rtt_latency":52, "root_time_now":442190}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":452672, "total_sent":42, "total_received":43, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":43, "server_received":85, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":57, "root_time_now":452690}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":463203, "total_sent":43, "total_received":44, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":44, "server_received":87, "server_bytes_rx":60, "n2r_latency":57, "hops":0, "rtt_latency":62, "root_time_now":463260}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":473734, "total_sent":44, "total_received":45, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":45, "server_received":89, "server_bytes_rx":60, "n2r_latency":26, "hops":0, "rtt_latency":67, "root_time_now":473760}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":484265, "total_sent":45, "total_received":46, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":46, "server_received":91, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":72, "root_time_now":484330}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":494796, "total_sent":46, "total_received":47, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":47, "server_received":93, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":42, "root_time_now":494830}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":505329, "total_sent":47, "total_received":48, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":48, "server_received":95, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":47, "root_time_now":505400}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":515860, "total_sent":48, "total_received":49, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":49, "server_received":97, "server_bytes_rx":60, "n2r_latency":40, "hops":0, "rtt_latency":52, "root_time_now":515900}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":526391, "total_sent":49, "total_received":50, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":50, "server_received":99, "server_bytes_rx":60, "n2r_latency":9, "hops":0, "rtt_latency":57, "root_time_now":526400}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":536920, "total_sent":50, "total_received":51, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":51, "server_received":101, "server_bytes_rx":60, "n2r_latency":50, "hops":0, "rtt_latency":62, "root_time_now":536970}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":547453, "total_sent":51, "total_received":52, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":52, "server_received":103, "server_bytes_rx":60, "n2r_latency":17, "hops":0, "rtt_latency":67, "root_time_now":547470}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":557984, "total_sent":52, "total_received":53, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":53, "server_received":105, "server_bytes_rx":60, "n2r_latency":56, "hops":0, "rtt_latency":72, "root_time_now":558040}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":568515, "total_sent":53, "total_received":54, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":54, "server_received":107, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":42, "root_time_now":568540}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":579044, "total_sent":54, "total_received":55, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":55, "server_received":109, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":47, "root_time_now":579110}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":589577, "total_sent":55, "total_received":56, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":56, "server_received":111, "server_bytes_rx":60, "n2r_latency":33, "hops":0, "rtt_latency":52, "root_time_now":589610}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":600106, "total_sent":56, "total_received":58, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":58, "server_received":114, "server_bytes_rx":60, "n2r_latency":74, "hops":0, "rtt_latency":62, "root_time_now":600180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":610637, "total_sent":57, "total_received":59, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":59, "server_received":116, "server_bytes_rx":60, "n2r_latency":43, "hops":0, "rtt_latency":67, "root_time_now":610680}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":621168, "total_sent":58, "total_received":60, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":60, "server_received":118, "server_bytes_rx":60, "n2r_latency":12, "hops":0, "rtt_latency":72, "root_time_now":621180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":631699, "total_sent":59, "total_received":61, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":61, "server_received":120, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":42, "root_time_now":631750}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":642230, "total_sent":60, "total_received":62, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":62, "server_received":122, "server_bytes_rx":60, "n2r_latency":20, "hops":0, "rtt_latency":47, "root_time_now":642250}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":652761, "total_sent":61, "total_received":63, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":63, "server_received":124, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":52, "root_time_now":652820}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":663294, "total_sent":62, "total_received":64, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":64, "server_received":126, "server_bytes_rx":60, "n2r_latency":26, "hops":0, "rtt_latency":57, "root_time_now":663320}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":673823, "total_sent":63, "total_received":65, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":65, "server_received":128, "server_bytes_rx":60, "n2r_latency":67, "hops":0, "rtt_latency":62, "root_time_now":673890}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":684354, "total_sent":64, "total_received":66, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":66, "server_received":130, "server_bytes_rx":60, "n2r_latency":36, "hops":0, "rtt_latency":67, "root_time_now":684390}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":694885, "total_sent":65, "total_received":67, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":67, "server_received":132, "server_bytes_rx":60, "n2r_latency":75, "hops":0, "rtt_latency":72, "root_time_now":694960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":705418, "total_sent":66, "total_received":68, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":68, "server_received":134, "server_bytes_rx":60, "n2r_latency":42, "hops":0, "rtt_latency":42, "root_time_now":705460}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":715947, "total_sent":67, "total_received":69, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":69, "server_received":136, "server_bytes_rx":60, "n2r_latency":13, "hops":0, "rtt_latency":47, "root_time_now":715960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":726478, "total_sent":68, "total_received":70, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":70, "server_received":138, "server_bytes_rx":60, "n2r_latency":52, "hops":0, "rtt_latency":52, "root_time_now":726530}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":737011, "total_sent":69, "total_received":71, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":71, "server_received":140, "server_bytes_rx":60, "n2r_latency":19, "hops":0, "rtt_latency":57, "root_time_now":737030}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":747540, "total_sent":70, "total_received":72, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":72, "server_received":142, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":62, "root_time_now":747600}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":758071, "total_sent":71, "total_received":73, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":73, "server_received":144, "server_bytes_rx":60, "n2r_latency":29, "hops":0, "rtt_latency":67, "root_time_now":758100}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":768604, "total_sent":72, "total_received":74, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":74, "server_received":146, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":72, "root_time_now":768670}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":779135, "total_sent":73, "total_received":75, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":75, "server_received":148, "server_bytes_rx":60, "n2r_latency":35, "hops":0, "rtt_latency":42, "root_time_now":779170}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":789666, "total_sent":74, "total_received":76, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":76, "server_received":150, "server_bytes_rx":60, "n2r_latency":4, "hops":0, "rtt_latency":47, "root_time_now":789670}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":800195, "total_sent":75, "total_received":78, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":78, "server_received":153, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":57, "root_time_now":800240}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":810726, "total_sent":76, "total_received":79, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":79, "server_received":155, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":62, "root_time_now":810740}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":821257, "total_sent":77, "total_received":80, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":80, "server_received":157, "server_bytes_rx":60, "n2r_latency":53, "hops":0, "rtt_latency":67, "root_time_now":821310}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":831788, "total_sent":78, "total_received":81, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":81, "server_received":159, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":72, "root_time_now":831810}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":842319, "total_sent":79, "total_received":82, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":82, "server_received":161, "server_bytes_rx":60, "n2r_latency":61, "hops":0, "rtt_latency":42, "root_time_now":842380}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":852850, "total_sent":80, "total_received":83, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":83, "server_received":163, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":47, "root_time_now":852880}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":863381, "total_sent":81, "total_received":84, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":84, "server_received":165, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":87, "root_time_now":863450}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":873912, "total_sent":82, "total_received":85, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":85, "server_received":167, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":57, "root_time_now":873950}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":884443, "total_sent":83, "total_received":86, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":86, "server_received":169, "server_bytes_rx":60, "n2r_latency":7, "hops":0, "rtt_latency":62, "root_time_now":884450}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":894976, "total_sent":84, "total_received":87, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":87, "server_received":171, "server_bytes_rx":60, "n2r_latency":44, "hops":0, "rtt_latency":67, "root_time_now":895020}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":905505, "total_sent":85, "total_received":88, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":88, "server_received":173, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":72, "root_time_now":905520}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":916036, "total_sent":86, "total_received":89, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":89, "server_received":175, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":42, "root_time_now":916090}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":926569, "total_sent":87, "total_received":90, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":90, "server_received":177, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":47, "root_time_now":926590}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":937100, "total_sent":88, "total_received":91, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":91, "server_received":179, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":52, "root_time_now":937160}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":947629, "total_sent":89, "total_received":92, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":92, "server_received":181, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":57, "root_time_now":947660}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":958162, "total_sent":90, "total_received":93, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":93, "server_received":183, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":62, "root_time_now":958230}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":968693, "total_sent":91, "total_received":94, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":94, "server_received":185, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":67, "root_time_now":968730}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":979222, "total_sent":92, "total_received":95, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":95, "server_received":187, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":72, "root_time_now":979230}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":989755, "total_sent":93, "total_received":96, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":96, "server_received":189, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":42, "root_time_now":989800}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1000284, "total_sent":94, "total_received":98, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":98, "server_received":192, "server_bytes_rx":60, "n2r_latency":16, "hops":0, "rtt_latency":52, "root_time_now":1000300}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1010815, "total_sent":95, "total_received":99, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":99, "server_received":194, "server_bytes_rx":60, "n2r_latency":55, "hops":0, "rtt_latency":57, "root_time_now":1010870}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1021348, "total_sent":96, "total_received":100, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":100, "server_received":196, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":62, "root_time_now":1021370}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1031877, "total_sent":97, "total_received":101, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":101, "server_received":198, "server_bytes_rx":60, "n2r_latency":63, "hops":0, "rtt_latency":67, "root_time_now":1031940}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1042408, "total_sent":98, "total_received":102, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":102, "server_received":200, "server_bytes_rx":60, "n2r_latency":32, "hops":0, "rtt_latency":72, "root_time_now":1042440}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1052939, "total_sent":99, "total_received":103, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":103, "server_received":202, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":112, "root_time_now":1053010}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1063472, "total_sent":100, "total_received":104, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":104, "server_received":204, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":47, "root_time_now":1063510}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1074001, "total_sent":101, "total_received":105, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":105, "server_received":206, "server_bytes_rx":60, "n2r_latency":9, "hops":0, "rtt_latency":52, "root_time_now":1074010}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1084532, "total_sent":102, "total_received":106, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":106, "server_received":208, "server_bytes_rx":60, "n2r_latency":48, "hops":0, "rtt_latency":57, "root_time_now":1084580}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1095065, "total_sent":103, "total_received":107, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":107, "server_received":210, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":62, "root_time_now":1095080}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1105596, "total_sent":104, "total_received":108, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":108, "server_received":212, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":67, "root_time_now":1105650}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1116125, "total_sent":105, "total_received":109, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":109, "server_received":214, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":72, "root_time_now":1116150}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1126656, "total_sent":106, "total_received":110, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":110, "server_received":216, "server_bytes_rx":60, "n2r_latency":64, "hops":0, "rtt_latency":42, "root_time_now":1126720}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1137189, "total_sent":107, "total_received":111, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":111, "server_received":218, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":47, "root_time_now":1137220}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1147721, "total_sent":108, "total_received":112, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":112, "server_received":220, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":52, "root_time_now":1147790}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1158249, "total_sent":109, "total_received":113, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":113, "server_received":222, "server_bytes_rx":60, "n2r_latency":41, "hops":0, "rtt_latency":57, "root_time_now":1158290}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1168780, "total_sent":110, "total_received":114, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":114, "server_received":224, "server_bytes_rx":60, "n2r_latency":10, "hops":0, "rtt_latency":62, "root_time_now":1168790}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1179313, "total_sent":111, "total_received":115, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":115, "server_received":226, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":67, "root_time_now":1179360}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1189844, "total_sent":112, "total_received":116, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":116, "server_received":228, "server_bytes_rx":60, "n2r_latency":16, "hops":0, "rtt_latency":72, "root_time_now":1189860}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1200373, "total_sent":113, "total_received":118, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":118, "server_received":231, "server_bytes_rx":60, "n2r_latency":57, "hops":0, "rtt_latency":47, "root_time_now":1200430}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1210904, "total_sent":114, "total_received":119, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":119, "server_received":233, "server_bytes_rx":60, "n2r_latency":26, "hops":0, "rtt_latency":52, "root_time_now":1210930}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1221435, "total_sent":115, "total_received":120, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":120, "server_received":235, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":57, "root_time_now":1221500}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1231966, "total_sent":116, "total_received":121, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":121, "server_received":237, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":62, "root_time_now":1232000}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1242501, "total_sent":117, "total_received":122, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":122, "server_received":239, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":67, "root_time_now":1242570}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1253028, "total_sent":118, "total_received":123, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":123, "server_received":241, "server_bytes_rx":60, "n2r_latency":42, "hops":0, "rtt_latency":72, "root_time_now":1253070}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1263559, "total_sent":119, "total_received":124, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":124, "server_received":243, "server_bytes_rx":60, "n2r_latency":11, "hops":0, "rtt_latency":42, "root_time_now":1263570}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1274090, "total_sent":120, "total_received":125, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":125, "server_received":245, "server_bytes_rx":60, "n2r_latency":50, "hops":0, "rtt_latency":47, "root_time_now":1274140}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1284623, "total_sent":121, "total_received":126, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":126, "server_received":247, "server_bytes_rx":60, "n2r_latency":17, "hops":0, "rtt_latency":52, "root_time_now":1284640}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1295154, "total_sent":122, "total_received":127, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":127, "server_received":249, "server_bytes_rx":60, "n2r_latency":56, "hops":0, "rtt_latency":57, "root_time_now":1295210}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1305683, "total_sent":123, "total_received":128, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":128, "server_received":251, "server_bytes_rx":60, "n2r_latency":27, "hops":0, "rtt_latency":62, "root_time_now":1305710}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1316214, "total_sent":124, "total_received":129, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":129, "server_received":253, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":67, "root_time_now":1316280}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1326747, "total_sent":125, "total_received":130, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":130, "server_received":255, "server_bytes_rx":60, "n2r_latency":33, "hops":0, "rtt_latency":72, "root_time_now":1326780}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1337278, "total_sent":126, "total_received":131, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":131, "server_received":257, "server_bytes_rx":60, "n2r_latency":72, "hops":0, "rtt_latency":42, "root_time_now":1337350}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1347807, "total_sent":127, "total_received":132, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":132, "server_received":259, "server_bytes_rx":60, "n2r_latency":43, "hops":0, "rtt_latency":47, "root_time_now":1347850}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1358340, "total_sent":128, "total_received":133, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":133, "server_received":261, "server_bytes_rx":60, "n2r_latency":10, "hops":0, "rtt_latency":52, "root_time_now":1358350}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1368871, "total_sent":129, "total_received":134, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":134, "server_received":263, "server_bytes_rx":60, "n2r_latency":49, "hops":0, "rtt_latency":57, "root_time_now":1368920}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1379402, "total_sent":130, "total_received":135, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":135, "server_received":265, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":62, "root_time_now":1379420}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1389931, "total_sent":131, "total_received":136, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":137, "server_received":267, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":67, "root_time_now":1389991}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1400462, "total_sent":132, "total_received":138, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":138, "server_received":270, "server_bytes_rx":60, "n2r_latency":28, "hops":0, "rtt_latency":42, "root_time_now":1400490}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1410993, "total_sent":133, "total_received":139, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":139, "server_received":272, "server_bytes_rx":60, "n2r_latency":67, "hops":0, "rtt_latency":47, "root_time_now":1411060}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1421524, "total_sent":134, "total_received":140, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":140, "server_received":274, "server_bytes_rx":60, "n2r_latency":36, "hops":0, "rtt_latency":52, "root_time_now":1421560}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1432055, "total_sent":135, "total_received":141, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":141, "server_received":276, "server_bytes_rx":60, "n2r_latency":75, "hops":0, "rtt_latency":57, "root_time_now":1432130}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1442586, "total_sent":136, "total_received":142, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":142, "server_received":278, "server_bytes_rx":60, "n2r_latency":44, "hops":0, "rtt_latency":62, "root_time_now":1442630}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1453117, "total_sent":137, "total_received":143, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":143, "server_received":280, "server_bytes_rx":60, "n2r_latency":13, "hops":0, "rtt_latency":67, "root_time_now":1453130}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1463648, "total_sent":138, "total_received":144, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":144, "server_received":282, "server_bytes_rx":60, "n2r_latency":52, "hops":0, "rtt_latency":72, "root_time_now":1463700}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1474181, "total_sent":139, "total_received":145, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":145, "server_received":284, "server_bytes_rx":60, "n2r_latency":19, "hops":0, "rtt_latency":42, "root_time_now":1474200}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1484710, "total_sent":140, "total_received":146, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":146, "server_received":286, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":47, "root_time_now":1484770}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1495241, "total_sent":141, "total_received":147, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":147, "server_received":288, "server_bytes_rx":60, "n2r_latency":29, "hops":0, "rtt_latency":52, "root_time_now":1495270}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1505774, "total_sent":142, "total_received":148, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":148, "server_received":290, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":57, "root_time_now":1505840}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1516305, "total_sent":143, "total_received":149, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":149, "server_received":292, "server_bytes_rx":60, "n2r_latency":35, "hops":0, "rtt_latency":62, "root_time_now":1516340}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1526834, "total_sent":144, "total_received":150, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":150, "server_received":294, "server_bytes_rx":60, "n2r_latency":6, "hops":0, "rtt_latency":67, "root_time_now":1526840}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1537365, "total_sent":145, "total_received":151, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":151, "server_received":296, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":72, "root_time_now":1537410}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1547896, "total_sent":146, "total_received":152, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":152, "server_received":298, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":42, "root_time_now":1547910}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1558429, "total_sent":147, "total_received":153, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":153, "server_received":300, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":47, "root_time_now":1558480}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1568960, "total_sent":148, "total_received":154, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":154, "server_received":302, "server_bytes_rx":60, "n2r_latency":20, "hops":0, "rtt_latency":52, "root_time_now":1568980}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1579491, "total_sent":149, "total_received":155, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":155, "server_received":304, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":57, "root_time_now":1579550}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1590020, "total_sent":150, "total_received":156, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":157, "server_received":306, "server_bytes_rx":60, "n2r_latency":100, "hops":0, "rtt_latency":62, "root_time_now":1590120}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1600551, "total_sent":151, "total_received":158, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":158, "server_received":309, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":72, "root_time_now":1600620}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1611082, "total_sent":152, "total_received":159, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":159, "server_received":311, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":42, "root_time_now":1611120}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1621613, "total_sent":153, "total_received":160, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":160, "server_received":313, "server_bytes_rx":60, "n2r_latency":7, "hops":0, "rtt_latency":47, "root_time_now":1621620}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1632144, "total_sent":154, "total_received":161, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":161, "server_received":315, "server_bytes_rx":60, "n2r_latency":46, "hops":0, "rtt_latency":52, "root_time_now":1632190}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1642675, "total_sent":155, "total_received":162, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":162, "server_received":317, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":57, "root_time_now":1642690}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1653206, "total_sent":156, "total_received":163, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":163, "server_received":319, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":62, "root_time_now":1653260}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1663739, "total_sent":157, "total_received":164, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":164, "server_received":321, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":67, "root_time_now":1663760}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1674268, "total_sent":158, "total_received":165, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":165, "server_received":323, "server_bytes_rx":60, "n2r_latency":62, "hops":0, "rtt_latency":72, "root_time_now":1674330}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1684799, "total_sent":159, "total_received":166, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":166, "server_received":325, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":42, "root_time_now":1684830}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1695332, "total_sent":160, "total_received":167, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":167, "server_received":327, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":47, "root_time_now":1695400}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1705863, "total_sent":161, "total_received":168, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":168, "server_received":329, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":52, "root_time_now":1705900}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1716392, "total_sent":162, "total_received":169, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":169, "server_received":331, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":57, "root_time_now":1716400}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1726923, "total_sent":163, "total_received":170, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":170, "server_received":333, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":62, "root_time_now":1726970}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1737456, "total_sent":164, "total_received":171, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":171, "server_received":335, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":67, "root_time_now":1737470}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1747987, "total_sent":165, "total_received":172, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":172, "server_received":337, "server_bytes_rx":60, "n2r_latency":53, "hops":0, "rtt_latency":72, "root_time_now":1748040}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1758516, "total_sent":166, "total_received":173, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":173, "server_received":339, "server_bytes_rx":60, "n2r_latency":24, "hops":0, "rtt_latency":42, "root_time_now":1758540}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1769049, "total_sent":167, "total_received":174, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":174, "server_received":341, "server_bytes_rx":60, "n2r_latency":61, "hops":0, "rtt_latency":47, "root_time_now":1769110}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1779580, "total_sent":168, "total_received":175, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":175, "server_received":343, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":52, "root_time_now":1779610}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1790109, "total_sent":169, "total_received":177, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":177, "server_received":346, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":62, "root_time_now":1790180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1800640, "total_sent":170, "total_received":178, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":178, "server_received":348, "server_bytes_rx":60, "n2r_latency":40, "hops":0, "rtt_latency":67, "root_time_now":1800680}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1811171, "total_sent":171, "total_received":179, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":179, "server_received":350, "server_bytes_rx":60, "n2r_latency":9, "hops":0, "rtt_latency":72, "root_time_now":1811180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1821702, "total_sent":172, "total_received":180, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":180, "server_received":352, "server_bytes_rx":60, "n2r_latency":48, "hops":0, "rtt_latency":42, "root_time_now":1821750}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1832233, "total_sent":173, "total_received":181, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":181, "server_received":354, "server_bytes_rx":60, "n2r_latency":17, "hops":0, "rtt_latency":47, "root_time_now":1832250}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1842764, "total_sent":174, "total_received":182, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":182, "server_received":356, "server_bytes_rx":60, "n2r_latency":56, "hops":0, "rtt_latency":52, "root_time_now":1842820}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1853295, "total_sent":175, "total_received":183, "bytes_tx":60, "bytes_rx":12, "r2n_latency":43, "lqi":100, "rssi":-52, "server_sent":183, "server_received":358, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":56, "root_time_now":1853320}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1863826, "total_sent":176, "total_received":184, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":184, "server_received":360, "server_bytes_rx":60, "n2r_latency":64, "hops":0, "rtt_latency":62, "root_time_now":1863890}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1874359, "total_sent":177, "total_received":185, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":185, "server_received":362, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":67, "root_time_now":1874390}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1884889, "total_sent":178, "total_received":186, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":186, "server_received":364, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":72, "root_time_now":1884960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1895419, "total_sent":179, "total_received":187, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":187, "server_received":366, "server_bytes_rx":60, "n2r_latency":41, "hops":0, "rtt_latency":42, "root_time_now":1895460}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1905952, "total_sent":180, "total_received":188, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":188, "server_received":368, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":47, "root_time_now":1905960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1916483, "total_sent":181, "total_received":189, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":189, "server_received":370, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":52, "root_time_now":1916530}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1927012, "total_sent":182, "total_received":190, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":190, "server_received":372, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":57, "root_time_now":1927030}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1937545, "total_sent":183, "total_received":191, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":191, "server_received":374, "server_bytes_rx":60, "n2r_latency":55, "hops":0, "rtt_latency":62, "root_time_now":1937600}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1948076, "total_sent":184, "total_received":192, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":192, "server_received":376, "server_bytes_rx":60, "n2r_latency":24, "hops":0, "rtt_latency":67, "root_time_now":1948100}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1958607, "total_sent":185, "total_received":193, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":193, "server_received":378, "server_bytes_rx":60, "n2r_latency":63, "hops":0, "rtt_latency":72, "root_time_now":1958670}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1969136, "total_sent":186, "total_received":194, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":194, "server_received":380, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":42, "root_time_now":1969170}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1979671, "total_sent":187, "total_received":195, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":195, "server_received":382, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":47, "root_time_now":1979740}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":1990198, "total_sent":188, "total_received":197, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":197, "server_received":385, "server_bytes_rx":60, "n2r_latency":42, "hops":0, "rtt_latency":57, "root_time_now":1990240}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2000729, "total_sent":189, "total_received":198, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":198, "server_received":387, "server_bytes_rx":60, "n2r_latency":11, "hops":0, "rtt_latency":62, "root_time_now":2000740}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2011260, "total_sent":190, "total_received":199, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":199, "server_received":389, "server_bytes_rx":60, "n2r_latency":50, "hops":0, "rtt_latency":67, "root_time_now":2011310}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2021791, "total_sent":191, "total_received":200, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":200, "server_received":391, "server_bytes_rx":60, "n2r_latency":19, "hops":0, "rtt_latency":72, "root_time_now":2021810}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2032322, "total_sent":192, "total_received":201, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":201, "server_received":393, "server_bytes_rx":60, "n2r_latency":58, "hops":0, "rtt_latency":42, "root_time_now":2032380}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2042855, "total_sent":193, "total_received":202, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":202, "server_received":395, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":47, "root_time_now":2042880}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2053384, "total_sent":194, "total_received":203, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":203, "server_received":397, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":52, "root_time_now":2053450}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2063915, "total_sent":195, "total_received":204, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":204, "server_received":399, "server_bytes_rx":60, "n2r_latency":35, "hops":0, "rtt_latency":57, "root_time_now":2063950}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2074448, "total_sent":196, "total_received":205, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":205, "server_received":401, "server_bytes_rx":60, "n2r_latency":72, "hops":0, "rtt_latency":62, "root_time_now":2074520}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2084977, "total_sent":197, "total_received":206, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":206, "server_received":403, "server_bytes_rx":60, "n2r_latency":43, "hops":0, "rtt_latency":67, "root_time_now":2085020}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2095508, "total_sent":198, "total_received":207, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":207, "server_received":405, "server_bytes_rx":60, "n2r_latency":12, "hops":0, "rtt_latency":72, "root_time_now":2095520}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2106039, "total_sent":199, "total_received":208, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":208, "server_received":407, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":42, "root_time_now":2106090}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2116572, "total_sent":200, "total_received":209, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":209, "server_received":409, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":47, "root_time_now":2116590}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2127101, "total_sent":201, "total_received":210, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":210, "server_received":411, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":52, "root_time_now":2127160}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2137632, "total_sent":202, "total_received":211, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":211, "server_received":413, "server_bytes_rx":60, "n2r_latency":28, "hops":0, "rtt_latency":57, "root_time_now":2137660}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2148165, "total_sent":203, "total_received":212, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":212, "server_received":415, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":62, "root_time_now":2148230}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2158696, "total_sent":204, "total_received":213, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":213, "server_received":417, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":67, "root_time_now":2158730}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2169225, "total_sent":205, "total_received":214, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":214, "server_received":419, "server_bytes_rx":60, "n2r_latency":75, "hops":0, "rtt_latency":72, "root_time_now":2169300}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2179758, "total_sent":206, "total_received":215, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":215, "server_received":421, "server_bytes_rx":60, "n2r_latency":42, "hops":0, "rtt_latency":42, "root_time_now":2179800}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2190287, "total_sent":207, "total_received":217, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":217, "server_received":424, "server_bytes_rx":60, "n2r_latency":13, "hops":0, "rtt_latency":52, "root_time_now":2190300}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2200818, "total_sent":208, "total_received":218, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":218, "server_received":426, "server_bytes_rx":60, "n2r_latency":52, "hops":0, "rtt_latency":57, "root_time_now":2200870}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2211349, "total_sent":209, "total_received":219, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":219, "server_received":428, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":62, "root_time_now":2211370}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2221880, "total_sent":210, "total_received":220, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":220, "server_received":430, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":67, "root_time_now":2221940}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2232411, "total_sent":211, "total_received":221, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":221, "server_received":432, "server_bytes_rx":60, "n2r_latency":29, "hops":0, "rtt_latency":72, "root_time_now":2232440}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2242942, "total_sent":212, "total_received":222, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":222, "server_received":434, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":42, "root_time_now":2243010}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2253473, "total_sent":213, "total_received":223, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":223, "server_received":436, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":47, "root_time_now":2253510}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2264004, "total_sent":214, "total_received":224, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":224, "server_received":438, "server_bytes_rx":60, "n2r_latency":6, "hops":0, "rtt_latency":52, "root_time_now":2264010}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2274535, "total_sent":215, "total_received":225, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":225, "server_received":440, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":57, "root_time_now":2274580}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2285066, "total_sent":216, "total_received":226, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":226, "server_received":442, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":62, "root_time_now":2285080}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2295599, "total_sent":217, "total_received":227, "bytes_tx":60, "bytes_rx":12, "r2n_latency":274, "lqi":100, "rssi":-52, "server_sent":227, "server_received":444, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":172, "root_time_now":2295650}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2306130, "total_sent":218, "total_received":228, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":228, "server_received":446, "server_bytes_rx":60, "n2r_latency":20, "hops":0, "rtt_latency":72, "root_time_now":2306150}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2316659, "total_sent":219, "total_received":229, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":229, "server_received":448, "server_bytes_rx":60, "n2r_latency":61, "hops":0, "rtt_latency":42, "root_time_now":2316720}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2327190, "total_sent":220, "total_received":230, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":230, "server_received":450, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":47, "root_time_now":2327220}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2337721, "total_sent":221, "total_received":231, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":231, "server_received":452, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":52, "root_time_now":2337790}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2348254, "total_sent":222, "total_received":232, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":232, "server_received":454, "server_bytes_rx":60, "n2r_latency":36, "hops":0, "rtt_latency":57, "root_time_now":2348290}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2358785, "total_sent":223, "total_received":233, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":233, "server_received":456, "server_bytes_rx":60, "n2r_latency":5, "hops":0, "rtt_latency":62, "root_time_now":2358790}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2369314, "total_sent":224, "total_received":234, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":234, "server_received":458, "server_bytes_rx":60, "n2r_latency":46, "hops":0, "rtt_latency":67, "root_time_now":2369360}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2379847, "total_sent":225, "total_received":235, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":235, "server_received":460, "server_bytes_rx":60, "n2r_latency":13, "hops":0, "rtt_latency":72, "root_time_now":2379860}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2390376, "total_sent":226, "total_received":237, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":237, "server_received":463, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":47, "root_time_now":2390430}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2400909, "total_sent":227, "total_received":238, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":238, "server_received":465, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":52, "root_time_now":2400930}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2411438, "total_sent":228, "total_received":239, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":239, "server_received":467, "server_bytes_rx":60, "n2r_latency":62, "hops":0, "rtt_latency":57, "root_time_now":2411500}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2421969, "total_sent":229, "total_received":240, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":240, "server_received":469, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":62, "root_time_now":2422000}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2432500, "total_sent":230, "total_received":241, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":241, "server_received":471, "server_bytes_rx":60, "n2r_latency":70, "hops":0, "rtt_latency":67, "root_time_now":2432570}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2443033, "total_sent":231, "total_received":242, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":242, "server_received":473, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":72, "root_time_now":2443070}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2453562, "total_sent":232, "total_received":243, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":243, "server_received":475, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":42, "root_time_now":2453570}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2464093, "total_sent":233, "total_received":244, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":244, "server_received":477, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":47, "root_time_now":2464140}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2474626, "total_sent":234, "total_received":245, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":245, "server_received":479, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":52, "root_time_now":2474640}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2485155, "total_sent":235, "total_received":246, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":246, "server_received":481, "server_bytes_rx":60, "n2r_latency":55, "hops":0, "rtt_latency":57, "root_time_now":2485210}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2495686, "total_sent":236, "total_received":247, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":247, "server_received":483, "server_bytes_rx":60, "n2r_latency":24, "hops":0, "rtt_latency":62, "root_time_now":2495710}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2506219, "total_sent":237, "total_received":248, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":248, "server_received":485, "server_bytes_rx":60, "n2r_latency":61, "hops":0, "rtt_latency":67, "root_time_now":2506280}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2516750, "total_sent":238, "total_received":249, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":249, "server_received":487, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":72, "root_time_now":2516780}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2527279, "total_sent":239, "total_received":250, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":250, "server_received":489, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":42, "root_time_now":2527350}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2537810, "total_sent":240, "total_received":251, "bytes_tx":60, "bytes_rx":12, "r2n_latency":23, "lqi":100, "rssi":-52, "server_sent":251, "server_received":491, "server_bytes_rx":60, "n2r_latency":40, "hops":0, "rtt_latency":46, "root_time_now":2537850}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2548343, "total_sent":241, "total_received":252, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":252, "server_received":493, "server_bytes_rx":60, "n2r_latency":7, "hops":0, "rtt_latency":52, "root_time_now":2548350}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2558874, "total_sent":242, "total_received":253, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":253, "server_received":495, "server_bytes_rx":60, "n2r_latency":46, "hops":0, "rtt_latency":57, "root_time_now":2558920}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2569405, "total_sent":243, "total_received":254, "bytes_tx":60, "bytes_rx":12, "r2n_latency":194, "lqi":100, "rssi":-52, "server_sent":254, "server_received":497, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":132, "root_time_now":2569420}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2579934, "total_sent":244, "total_received":255, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":256, "server_received":499, "server_bytes_rx":60, "n2r_latency":57, "hops":0, "rtt_latency":67, "root_time_now":2579991}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2590465, "total_sent":245, "total_received":257, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":257, "server_received":502, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":42, "root_time_now":2590490}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2600996, "total_sent":246, "total_received":258, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":258, "server_received":504, "server_bytes_rx":60, "n2r_latency":64, "hops":0, "rtt_latency":47, "root_time_now":2601060}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2611527, "total_sent":247, "total_received":259, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":259, "server_received":506, "server_bytes_rx":60, "n2r_latency":33, "hops":0, "rtt_latency":52, "root_time_now":2611560}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2622059, "total_sent":248, "total_received":260, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":260, "server_received":508, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":57, "root_time_now":2622130}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2632589, "total_sent":249, "total_received":261, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":261, "server_received":510, "server_bytes_rx":60, "n2r_latency":41, "hops":0, "rtt_latency":62, "root_time_now":2632630}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2643120, "total_sent":250, "total_received":262, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":262, "server_received":512, "server_bytes_rx":60, "n2r_latency":10, "hops":0, "rtt_latency":67, "root_time_now":2643130}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2653653, "total_sent":251, "total_received":263, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":263, "server_received":514, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":72, "root_time_now":2653700}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2664182, "total_sent":252, "total_received":264, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":264, "server_received":516, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":42, "root_time_now":2664200}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2674713, "total_sent":253, "total_received":265, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":265, "server_received":518, "server_bytes_rx":60, "n2r_latency":57, "hops":0, "rtt_latency":47, "root_time_now":2674770}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2685246, "total_sent":254, "total_received":266, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":266, "server_received":520, "server_bytes_rx":60, "n2r_latency":24, "hops":0, "rtt_latency":52, "root_time_now":2685270}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2695775, "total_sent":255, "total_received":267, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":267, "server_received":522, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":57, "root_time_now":2695840}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2706306, "total_sent":256, "total_received":268, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":268, "server_received":524, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":62, "root_time_now":2706340}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2716839, "total_sent":257, "total_received":269, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":269, "server_received":526, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":67, "root_time_now":2716910}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2727370, "total_sent":258, "total_received":270, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":270, "server_received":528, "server_bytes_rx":60, "n2r_latency":40, "hops":0, "rtt_latency":72, "root_time_now":2727410}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2737899, "total_sent":259, "total_received":271, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":271, "server_received":530, "server_bytes_rx":60, "n2r_latency":11, "hops":0, "rtt_latency":42, "root_time_now":2737910}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2748430, "total_sent":260, "total_received":272, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":272, "server_received":532, "server_bytes_rx":60, "n2r_latency":50, "hops":0, "rtt_latency":47, "root_time_now":2748480}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2758963, "total_sent":261, "total_received":273, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":273, "server_received":534, "server_bytes_rx":60, "n2r_latency":17, "hops":0, "rtt_latency":52, "root_time_now":2758980}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2769494, "total_sent":262, "total_received":274, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":274, "server_received":536, "server_bytes_rx":60, "n2r_latency":56, "hops":0, "rtt_latency":57, "root_time_now":2769550}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2780025, "total_sent":263, "total_received":275, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":276, "server_received":538, "server_bytes_rx":60, "n2r_latency":95, "hops":0, "rtt_latency":62, "root_time_now":2780120}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2790554, "total_sent":264, "total_received":277, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":277, "server_received":541, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":72, "root_time_now":2790620}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2801085, "total_sent":265, "total_received":278, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":278, "server_received":543, "server_bytes_rx":60, "n2r_latency":35, "hops":0, "rtt_latency":42, "root_time_now":2801120}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2811616, "total_sent":266, "total_received":279, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":279, "server_received":545, "server_bytes_rx":60, "n2r_latency":74, "hops":0, "rtt_latency":47, "root_time_now":2811690}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2822147, "total_sent":267, "total_received":280, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":280, "server_received":547, "server_bytes_rx":60, "n2r_latency":43, "hops":0, "rtt_latency":52, "root_time_now":2822190}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2832678, "total_sent":268, "total_received":281, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":281, "server_received":549, "server_bytes_rx":60, "n2r_latency":12, "hops":0, "rtt_latency":57, "root_time_now":2832690}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2843209, "total_sent":269, "total_received":282, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":282, "server_received":551, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":62, "root_time_now":2843260}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2853742, "total_sent":270, "total_received":283, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":283, "server_received":553, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":67, "root_time_now":2853760}
+[Mote:3] Not reachable yet
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2864271, "total_sent":271, "total_received":284, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":284, "server_received":555, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":72, "root_time_now":2864330}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2874802, "total_sent":272, "total_received":285, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":285, "server_received":557, "server_bytes_rx":60, "n2r_latency":28, "hops":0, "rtt_latency":42, "root_time_now":2874830}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2885335, "total_sent":273, "total_received":286, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":286, "server_received":559, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":47, "root_time_now":2885400}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2895866, "total_sent":274, "total_received":287, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":287, "server_received":561, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":52, "root_time_now":2895900}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2906395, "total_sent":275, "total_received":288, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":288, "server_received":563, "server_bytes_rx":60, "n2r_latency":75, "hops":0, "rtt_latency":57, "root_time_now":2906470}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2916928, "total_sent":276, "total_received":289, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":289, "server_received":565, "server_bytes_rx":60, "n2r_latency":42, "hops":0, "rtt_latency":62, "root_time_now":2916970}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2927459, "total_sent":277, "total_received":290, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":290, "server_received":567, "server_bytes_rx":60, "n2r_latency":11, "hops":0, "rtt_latency":67, "root_time_now":2927470}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2937988, "total_sent":278, "total_received":291, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":291, "server_received":569, "server_bytes_rx":60, "n2r_latency":52, "hops":0, "rtt_latency":72, "root_time_now":2938040}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2948521, "total_sent":279, "total_received":292, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":292, "server_received":571, "server_bytes_rx":60, "n2r_latency":19, "hops":0, "rtt_latency":42, "root_time_now":2948540}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2959052, "total_sent":280, "total_received":293, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":293, "server_received":573, "server_bytes_rx":60, "n2r_latency":58, "hops":0, "rtt_latency":47, "root_time_now":2959110}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2969581, "total_sent":281, "total_received":294, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":294, "server_received":575, "server_bytes_rx":60, "n2r_latency":29, "hops":0, "rtt_latency":52, "root_time_now":2969610}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2980112, "total_sent":282, "total_received":296, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":296, "server_received":578, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":62, "root_time_now":2980180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":2990643, "total_sent":283, "total_received":297, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":297, "server_received":580, "server_bytes_rx":60, "n2r_latency":37, "hops":0, "rtt_latency":67, "root_time_now":2990680}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3001174, "total_sent":284, "total_received":298, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":298, "server_received":582, "server_bytes_rx":60, "n2r_latency":6, "hops":0, "rtt_latency":72, "root_time_now":3001180}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3011705, "total_sent":285, "total_received":299, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":299, "server_received":584, "server_bytes_rx":60, "n2r_latency":45, "hops":0, "rtt_latency":42, "root_time_now":3011750}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3022236, "total_sent":286, "total_received":300, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":300, "server_received":586, "server_bytes_rx":60, "n2r_latency":14, "hops":0, "rtt_latency":47, "root_time_now":3022250}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3032767, "total_sent":287, "total_received":301, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":301, "server_received":588, "server_bytes_rx":60, "n2r_latency":53, "hops":0, "rtt_latency":52, "root_time_now":3032820}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3043298, "total_sent":288, "total_received":302, "bytes_tx":60, "bytes_rx":12, "r2n_latency":43, "lqi":100, "rssi":-52, "server_sent":302, "server_received":590, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":56, "root_time_now":3043320}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3053831, "total_sent":289, "total_received":303, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":303, "server_received":592, "server_bytes_rx":60, "n2r_latency":59, "hops":0, "rtt_latency":62, "root_time_now":3053890}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3064360, "total_sent":290, "total_received":304, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":304, "server_received":594, "server_bytes_rx":60, "n2r_latency":30, "hops":0, "rtt_latency":67, "root_time_now":3064390}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3074891, "total_sent":291, "total_received":305, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":305, "server_received":596, "server_bytes_rx":60, "n2r_latency":69, "hops":0, "rtt_latency":72, "root_time_now":3074960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3085422, "total_sent":292, "total_received":306, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":306, "server_received":598, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":42, "root_time_now":3085460}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3095955, "total_sent":293, "total_received":307, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":307, "server_received":600, "server_bytes_rx":60, "n2r_latency":5, "hops":0, "rtt_latency":47, "root_time_now":3095960}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3106484, "total_sent":294, "total_received":308, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":308, "server_received":602, "server_bytes_rx":60, "n2r_latency":46, "hops":0, "rtt_latency":52, "root_time_now":3106530}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3117015, "total_sent":295, "total_received":309, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":309, "server_received":604, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":57, "root_time_now":3117030}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3127546, "total_sent":296, "total_received":310, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":310, "server_received":606, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":62, "root_time_now":3127600}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3138079, "total_sent":297, "total_received":311, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":311, "server_received":608, "server_bytes_rx":60, "n2r_latency":21, "hops":0, "rtt_latency":67, "root_time_now":3138100}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3148610, "total_sent":298, "total_received":312, "bytes_tx":60, "bytes_rx":12, "r2n_latency":73, "lqi":100, "rssi":-52, "server_sent":312, "server_received":610, "server_bytes_rx":60, "n2r_latency":60, "hops":0, "rtt_latency":71, "root_time_now":3148670}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3159139, "total_sent":299, "total_received":313, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":313, "server_received":612, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":42, "root_time_now":3159170}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3169672, "total_sent":300, "total_received":314, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":314, "server_received":614, "server_bytes_rx":60, "n2r_latency":68, "hops":0, "rtt_latency":47, "root_time_now":3169740}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3180201, "total_sent":301, "total_received":316, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":316, "server_received":617, "server_bytes_rx":60, "n2r_latency":39, "hops":0, "rtt_latency":57, "root_time_now":3180240}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3190732, "total_sent":302, "total_received":317, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":317, "server_received":619, "server_bytes_rx":60, "n2r_latency":8, "hops":0, "rtt_latency":62, "root_time_now":3190740}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3201263, "total_sent":303, "total_received":318, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":318, "server_received":621, "server_bytes_rx":60, "n2r_latency":47, "hops":0, "rtt_latency":67, "root_time_now":3201310}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3211794, "total_sent":304, "total_received":319, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":319, "server_received":623, "server_bytes_rx":60, "n2r_latency":16, "hops":0, "rtt_latency":72, "root_time_now":3211810}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3222325, "total_sent":305, "total_received":320, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":320, "server_received":625, "server_bytes_rx":60, "n2r_latency":55, "hops":0, "rtt_latency":42, "root_time_now":3222380}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3232858, "total_sent":306, "total_received":321, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":321, "server_received":627, "server_bytes_rx":60, "n2r_latency":22, "hops":0, "rtt_latency":47, "root_time_now":3232880}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3243387, "total_sent":307, "total_received":322, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":322, "server_received":629, "server_bytes_rx":60, "n2r_latency":63, "hops":0, "rtt_latency":52, "root_time_now":3243450}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3253918, "total_sent":308, "total_received":323, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":323, "server_received":631, "server_bytes_rx":60, "n2r_latency":32, "hops":0, "rtt_latency":57, "root_time_now":3253950}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:3] Not reachable yet
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3264449, "total_sent":309, "total_received":324, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":324, "server_received":633, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":62, "root_time_now":3264520}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3274982, "total_sent":310, "total_received":325, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":325, "server_received":635, "server_bytes_rx":60, "n2r_latency":38, "hops":0, "rtt_latency":67, "root_time_now":3275020}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3285511, "total_sent":311, "total_received":326, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":326, "server_received":637, "server_bytes_rx":60, "n2r_latency":9, "hops":0, "rtt_latency":72, "root_time_now":3285520}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3296042, "total_sent":312, "total_received":327, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":327, "server_received":639, "server_bytes_rx":60, "n2r_latency":48, "hops":0, "rtt_latency":42, "root_time_now":3296090}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3306575, "total_sent":313, "total_received":328, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":328, "server_received":641, "server_bytes_rx":60, "n2r_latency":15, "hops":0, "rtt_latency":47, "root_time_now":3306590}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3317106, "total_sent":314, "total_received":329, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":329, "server_received":643, "server_bytes_rx":60, "n2r_latency":54, "hops":0, "rtt_latency":52, "root_time_now":3317160}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3327635, "total_sent":315, "total_received":330, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":330, "server_received":645, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":57, "root_time_now":3327660}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3338168, "total_sent":316, "total_received":331, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":331, "server_received":647, "server_bytes_rx":60, "n2r_latency":62, "hops":0, "rtt_latency":62, "root_time_now":3338230}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3348699, "total_sent":317, "total_received":332, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":332, "server_received":649, "server_bytes_rx":60, "n2r_latency":31, "hops":0, "rtt_latency":67, "root_time_now":3348730}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3359229, "total_sent":318, "total_received":333, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":333, "server_received":651, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":72, "root_time_now":3359300}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3369761, "total_sent":319, "total_received":334, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":334, "server_received":653, "server_bytes_rx":60, "n2r_latency":39, "hops":0, "rtt_latency":42, "root_time_now":3369800}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3380290, "total_sent":320, "total_received":336, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":336, "server_received":656, "server_bytes_rx":60, "n2r_latency":10, "hops":0, "rtt_latency":52, "root_time_now":3380300}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3390821, "total_sent":321, "total_received":337, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":337, "server_received":658, "server_bytes_rx":60, "n2r_latency":49, "hops":0, "rtt_latency":57, "root_time_now":3390870}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3401352, "total_sent":322, "total_received":338, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":338, "server_received":660, "server_bytes_rx":60, "n2r_latency":18, "hops":0, "rtt_latency":62, "root_time_now":3401370}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3411883, "total_sent":323, "total_received":339, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":339, "server_received":662, "server_bytes_rx":60, "n2r_latency":57, "hops":0, "rtt_latency":67, "root_time_now":3411940}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3422414, "total_sent":324, "total_received":340, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":340, "server_received":664, "server_bytes_rx":60, "n2r_latency":26, "hops":0, "rtt_latency":72, "root_time_now":3422440}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3432945, "total_sent":325, "total_received":341, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":341, "server_received":666, "server_bytes_rx":60, "n2r_latency":65, "hops":0, "rtt_latency":42, "root_time_now":3433010}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3443476, "total_sent":326, "total_received":342, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":342, "server_received":668, "server_bytes_rx":60, "n2r_latency":34, "hops":0, "rtt_latency":47, "root_time_now":3443510}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3454009, "total_sent":327, "total_received":343, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":343, "server_received":670, "server_bytes_rx":60, "n2r_latency":71, "hops":0, "rtt_latency":52, "root_time_now":3454080}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3464540, "total_sent":328, "total_received":344, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":344, "server_received":672, "server_bytes_rx":60, "n2r_latency":40, "hops":0, "rtt_latency":57, "root_time_now":3464580}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3475071, "total_sent":329, "total_received":345, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":345, "server_received":674, "server_bytes_rx":60, "n2r_latency":9, "hops":0, "rtt_latency":62, "root_time_now":3475080}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3485600, "total_sent":330, "total_received":346, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":346, "server_received":676, "server_bytes_rx":60, "n2r_latency":50, "hops":0, "rtt_latency":67, "root_time_now":3485650}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3496131, "total_sent":331, "total_received":347, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":347, "server_received":678, "server_bytes_rx":60, "n2r_latency":19, "hops":0, "rtt_latency":72, "root_time_now":3496150}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3506664, "total_sent":332, "total_received":348, "bytes_tx":60, "bytes_rx":12, "r2n_latency":14, "lqi":100, "rssi":-52, "server_sent":348, "server_received":680, "server_bytes_rx":60, "n2r_latency":56, "hops":0, "rtt_latency":42, "root_time_now":3506720}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3517195, "total_sent":333, "total_received":349, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":349, "server_received":682, "server_bytes_rx":60, "n2r_latency":25, "hops":0, "rtt_latency":47, "root_time_now":3517220}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3527724, "total_sent":334, "total_received":350, "bytes_tx":60, "bytes_rx":12, "r2n_latency":33, "lqi":100, "rssi":-52, "server_sent":350, "server_received":684, "server_bytes_rx":60, "n2r_latency":66, "hops":0, "rtt_latency":51, "root_time_now":3527790}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3538257, "total_sent":335, "total_received":351, "bytes_tx":60, "bytes_rx":12, "r2n_latency":44, "lqi":100, "rssi":-52, "server_sent":351, "server_received":686, "server_bytes_rx":60, "n2r_latency":33, "hops":0, "rtt_latency":57, "root_time_now":3538290}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3548788, "total_sent":336, "total_received":352, "bytes_tx":60, "bytes_rx":12, "r2n_latency":54, "lqi":100, "rssi":-52, "server_sent":352, "server_received":688, "server_bytes_rx":60, "n2r_latency":72, "hops":0, "rtt_latency":62, "root_time_now":3548860}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3559319, "total_sent":337, "total_received":353, "bytes_tx":60, "bytes_rx":12, "r2n_latency":64, "lqi":100, "rssi":-52, "server_sent":353, "server_received":690, "server_bytes_rx":60, "n2r_latency":41, "hops":0, "rtt_latency":67, "root_time_now":3559360}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3569848, "total_sent":338, "total_received":354, "bytes_tx":60, "bytes_rx":12, "r2n_latency":74, "lqi":100, "rssi":-52, "server_sent":354, "server_received":692, "server_bytes_rx":60, "n2r_latency":12, "hops":0, "rtt_latency":72, "root_time_now":3569860}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3580379, "total_sent":339, "total_received":356, "bytes_tx":60, "bytes_rx":12, "r2n_latency":24, "lqi":100, "rssi":-52, "server_sent":356, "server_received":695, "server_bytes_rx":60, "n2r_latency":51, "hops":0, "rtt_latency":47, "root_time_now":3580430}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+[Mote:1] {"node":"fd00::202:2:2:2", "cpu_energy_mj":18, "lpm_energy_mj":0, "radio_tx_energy_mj":0, "radio_rx_energy_mj":8, "node_time":3590910, "total_sent":340, "total_received":357, "bytes_tx":60, "bytes_rx":12, "r2n_latency":34, "lqi":100, "rssi":-52, "server_sent":357, "server_received":697, "server_bytes_rx":60, "n2r_latency":20, "hops":0, "rtt_latency":52, "root_time_now":3590930}
+[Mote:3] Not reachable yet
+[Mote:2] Sensor IPv6 = fe80::202:2:2:2
+Final simulation time: 3601839000 ms
+Test ended at simulation time: 3601839000

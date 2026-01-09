@@ -10,6 +10,8 @@ Tools to facilitate the generation of scripts, execution, and analysis of simula
 - **`log-analysis`**: Scripts to decode Cooja logs, convert them to CSV, and generate various types of plots.
 - **`simulations`**: A directory-based database containing the input and output data of simulations.
 
+## [How to Start](./docker/README.md)
+
 ## License
 This project is licensed under the [MIT License](./LICENSE).
 
